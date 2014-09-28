@@ -21,6 +21,9 @@ function roots_scripts() {
    */
   if (WP_ENV === 'development') {
     $assets = array(
+      'b_css'     => '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css',
+      'b_js'      => '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js',
+      'icons'     => '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css',
       'css'       => '/assets/css/main.css',
       'js'        => '/assets/js/scripts.js',
       'modernizr' => '/assets/vendor/modernizr/modernizr.js',
@@ -30,6 +33,7 @@ function roots_scripts() {
     $get_assets = file_get_contents(get_template_directory() . '/assets/manifest.json');
     $assets     = json_decode($get_assets, true);
     $assets     = array(
+      'icons'     => '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css',
       'css'       => '/assets/css/main.min.css?' . $assets['assets/css/main.min.css']['hash'],
       'js'        => '/assets/js/scripts.min.js?' . $assets['assets/js/scripts.min.js']['hash'],
       'modernizr' => '/assets/js/vendor/modernizr.min.js',
@@ -37,6 +41,8 @@ function roots_scripts() {
     );
   }
 
+  wp_enqueue_style('b_css', $assets['b_css'], false, null);
+  wp_enqueue_style('icons', $assets['icons'], false, null);
   wp_enqueue_style('roots_css', get_template_directory_uri() . $assets['css'], false, null);
 
   /**
@@ -57,6 +63,7 @@ function roots_scripts() {
   wp_enqueue_script('modernizr', get_template_directory_uri() . $assets['modernizr'], array(), null, false);
   wp_enqueue_script('jquery');
   wp_enqueue_script('roots_js', get_template_directory_uri() . $assets['js'], array(), null, true);
+  wp_enqueue_script('b_js');
 }
 add_action('wp_enqueue_scripts', 'roots_scripts', 100);
 
@@ -79,7 +86,7 @@ add_action('wp_head', 'roots_jquery_local_fallback');
 
 /**
  * Google Analytics snippet from HTML5 Boilerplate
- * 
+ *
  * Cookie domain is 'auto' configured. See: http://goo.gl/VUCHKM
  */
 function roots_google_analytics() { ?>
