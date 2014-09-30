@@ -359,6 +359,11 @@ header {
     padding-right: 15px;
 }
 
+.btn-primary {
+    background: rgb(236, 37, 18);
+    border: none;
+}
+
 footer section {
     float: right;
     width: 50%;
