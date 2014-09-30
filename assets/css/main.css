@@ -360,15 +360,20 @@ header {
 }
 
 footer section {
-    float: left;
+    float: right;
     width: 50%;
+    margin: 24px 48px;
     min-width: 250px;
     max-width: 450px;
 }
-
+footer .widget_twitter_timeline {
+    float: left;
+    left: 0;
+}
 footer .widget_text a {
     color: rgb(41, 36, 32);
     float: left;
+    font-size: 2em;
 }
 
 footer .widget_text a:hover {
@@ -376,7 +381,6 @@ footer .widget_text a:hover {
 }
 
 .fb_iframe_widget {
-    float: right;
 }
 
 .theuglyvolvo_on_facebook img {
