@@ -1,0 +1,416 @@
+/**
+ * [Main Stylesheet]
+ *
+ * The Ugly Volvo WordPress theme's custom CSS.
+ *
+ * @author Luz M. Costa
+ * @updated 09.28.2014
+ * @version 0.1
+ *
+ * Notes:
+    * Developer Notes
+
+
+    * File Structure
+        Rules are divided by views and smaller objects
+        -    Document Tags
+        -    Containers + Wrappers
+        -    Titles and Content
+        -    Links and Menus
+        -    Tables
+        -    Forms
+        -    Responsive
+        -    Print
+
+    * Palette
+        Colors
+        -    White: #F3F3F3 | rgb(243, 243, 243)
+        -    Light Gray: #AFAFAF | rgb(175, 175, 175)
+        -    Midtone Gray: #4B4B4B | rgb(75, 75, 75)
+        -    Black: #292420 | rgb(41, 36, 32)
+        -    Red: #EC2512 | rgb(236, 37, 18)
+
+        User Messages
+        -    Error: #EC2512 | rgb(236, 37, 18)
+        -    Warn: #FF8000
+        -    Success: #007700
+
+    * Font
+        -    We're using "Trebuchet MS", Helvetica, sans-serif
+            because Trebuchet's narrow letters suit our tables
+        -    Should use em, rem, or small|medium|large.  Avoid using px for
+            font-size and line height.
+
+    * Spacing
+        -    Spacing should observe a 3px breakdown when possible.
+        -    We're using rem or em to overwrite px. This is key to
+            maintaining design consistency and responsiveness across
+            browsers and screens.
+ */
+
+/* Fonts */
+@import url(http://fonts.googleapis.com/css?family=Coming+Soon);
+
+/* Document Tags */
+body {
+    font-family: "Open Sans", sans-serif;
+    color: rgb(41, 36, 32);
+}
+
+::selection {
+    background: rgb(236, 37, 18); /* WebKit/Blink Browsers */
+    color: rgb(243, 243, 243);
+}
+::-moz-selection {
+    background: rgb(236, 37, 18); /* Gecko Browsers */
+    color: rgb(243, 243, 243);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: rgb(41, 36, 32);
+    font-family: "Coming Soon", "Open Sans", sans-serif;
+}
+
+a {
+    color: rgb(236, 37, 18);
+}
+
+a:hover,
+a:focus {
+    color: rgb(236, 37, 18);
+}
+
+address,
+cite,
+code,
+p {
+    -webkit-hyphens: auto;
+       -moz-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+    word-break: break-all;
+}
+
+caption,
+time {
+    font-size: 0.8em;
+}
+
+address,
+cite,
+code,
+ins {
+    font-family: monospace;
+    font-size: 0.8em;
+}
+
+pre {
+    color: rgb(75, 75, 75);
+    background: none;
+}
+
+blockquote,
+q {
+    border-left: 6px solid rgb(236, 37, 18);
+    border-radius: 3px;
+    font-size: 100%;
+    padding-left: 24px;
+}
+
+td,
+th {
+    border: 1px solid rgb(41, 36, 32);
+    padding: 6px 9px;
+}
+
+td {
+    font-weight: 300;
+}
+
+dt {
+    margin-bottom: 3px;
+}
+dd {
+    font-weight: 300;
+    margin-bottom: 6px;
+}
+
+/* Containers + Wrappers */
+.container {}
+.social-navbar {
+    background: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    width: 100%;
+}
+.header-brand {}
+.header-navbar {}
+
+.social,
+.share {
+    /*display: none;*/
+}
+.menu-icon {
+    float: right;
+    margin: 15px 30px;
+    position: absolute;
+    right: 30px;
+}
+
+.social .widget,
+.social .textwidget > div {
+    float: left;
+}
+.social .textwidget a {
+    margin: 6px 15px 0 0;
+}
+.social .textwidget > div > span,
+.social .textwidget a {
+    clear: both;
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+.social .widget_search {
+    margin: 24px;
+}
+.like,
+.retweet {
+    float: left;
+}
+.share {
+    float: right;
+    position: relative;
+    right: 120px;
+}
+
+.header-brand div {
+    text-align: center;
+}
+.header-brand img {
+    height: 500px;
+}
+
+.navbar-default {
+    background-color: #FFFFFF;
+    border: none;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    margin: auto;
+    max-width: 600px;
+}
+
+.navbar-nav {
+    float: none;
+    text-align: center;
+}
+
+.navbar-nav > li {
+    display: inline-block;
+    float: none;
+    margin: 12px 18px;
+    max-width: 81px;
+}
+
+.navbar-nav > li > a {
+    display: table-caption;
+    padding: 42px 0 0 0;
+    text-align: center;
+}
+
+.navbar-default .navbar-nav > li > a,
+h2 a {
+    color: rgb(41, 36, 32);
+}
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover,
+h2 a:focus,
+h2 a:hover {
+    color: rgb(236, 37, 18);
+    text-decoration: none;
+}
+
+.menu-most-recent {
+    background: url('../img/theuglyvolvo_recent.png') no-repeat center top;
+    background-size: 27px;
+}
+
+.menu-most-popular {
+    background: url('../img/theuglyvolvo_popular.png') no-repeat center top;
+    background-size: 32px;
+}
+
+.menu-old-posts {
+    background: url('../img/theuglyvolvo_archive.png') no-repeat center top;
+    background-size: 32px;
+}
+
+.menu-parenting-postcards {
+    background: url('../img/theuglyvolvo_image.png') no-repeat center -9px;
+    background-size: 45px;
+}
+
+.menu-contact-us {
+    background: url('../img/theuglyvolvo_contact.png') no-repeat center top;
+    background-size: 35px;
+}
+
+/* Title and Content */
+main {
+    font-size: 1.3em;
+    margin: auto;
+    max-width: 800px;
+    width: 95%;
+}
+
+header {
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+.home main {
+    text-align: center;
+    max-width: 100%;
+}
+
+.home article {
+    background: url('../img/theuglyvolvo_border.png') no-repeat center top;
+    display: inline-block;
+    height: 360px;
+    margin: 3px 6px 12px 6px;
+    width: 309px;
+}
+
+.home article header {
+    display: table;
+    height: 75px;
+    margin: 3px 12px 3px 18px;
+    position: absolute;
+}
+
+.home h2.entry-title {
+    display: table-cell;
+    font-size: 2rem;
+    margin: 12px 0 3px 0;
+    vertical-align: middle;
+    width: 276px;
+}
+
+.home article img {
+    /* float: none; */
+    height: 250px;
+    margin: 6px 0;
+    text-align: center;
+    width: 275px;
+}
+
+.home .entry-summary {
+    margin: 75px 0 0 4px;
+}
+
+.alert-warning {
+    background: none;
+    border: 1px solid rgb(236, 37, 18);
+    color: rgb(236, 37, 18);
+}
+
+/* Links and Menus */
+.pager .previous > a,
+.pager .previous > span,
+.pager .next > a,
+.pager .next > span {
+    float: none;
+}
+.pager li > a:hover,
+.pager li > a:focus {
+    background-color: transparent;
+}
+.pager li > a,
+.pager li > span {
+    border: none;
+    color: rgb(41, 36, 32);
+    line-height: 1;
+}
+.previous a {
+    background: rgb(255, 255, 255) url('../img/theuglyvolvo_arrow-left.png') no-repeat left top;
+    background-size: 18px;
+}
+.previous a:focus,
+.previous a:hover {
+    margin-right: 3px;
+}
+.previous span {
+    padding-left: 15px;
+}
+.next a {
+    background: rgb(255, 255, 255) url('../img/theuglyvolvo_arrow-right.png') no-repeat right top;
+    background-size: 18px;
+}
+.next a:focus,
+.next a:hover {
+    margin-left: 3px;
+}
+.next span {
+    padding-right: 15px;
+}
+
+footer section {
+    float: left;
+    width: 50%;
+    min-width: 250px;
+    max-width: 450px;
+}
+
+footer .widget_text a {
+    color: rgb(41, 36, 32);
+    float: left;
+}
+
+footer .widget_text a:hover {
+    color: rgb(236, 37, 18);
+}
+
+.fb_iframe_widget {
+    float: right;
+}
+
+.theuglyvolvo_on_facebook img {
+    border-radius: 4px;
+    margin-right: 12px;
+}
+
+.copyright {
+    background: rgb(41, 36, 32);
+    color: rgb(243, 243, 243);
+    padding: 3px;
+}
+
+/* Set Facebook Like button to brand's red. */
+.likeBoxStream:not(:first-child) {
+    display: none;
+}
+.likeBoxStream > div > div {
+    border: none;
+}
+.pluginButton,
+.pluginButtonContainer {
+    background: rgb(236, 37, 18) !important;
+    text-shadow: rgb(236, 37, 18) !important;
+}
+
+/* Table */
+
+
+/* Form */
+
+
+/* Responsive */
+
+
+/* Print */
+@media print {}
