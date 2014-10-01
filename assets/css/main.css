@@ -4,7 +4,7 @@
  * The Ugly Volvo WordPress theme's custom CSS.
  *
  * @author Luz M. Costa
- * @updated 09.28.2014
+ * @updated 09.30.2014
  * @version 0.1
  *
  * Notes:
@@ -148,7 +148,11 @@ dd {
     width: 100%;
 }
 .header-brand {}
-.header-navbar {}
+.header-navbar {
+    border-radius: 3px;
+    border-top: 3px solid rgb(0, 0, 0);
+    padding: 12px 0 0 0;
+}
 
 .social,
 .share {
@@ -198,8 +202,8 @@ dd {
 .navbar-default {
     background-color: #FFFFFF;
     border: none;
+    margin-bottom: 0;
 }
-
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     margin: auto;
     max-width: 600px;
@@ -419,6 +423,11 @@ footer .widget_text a:hover {
 
 
 /* Responsive */
+@media (max-width: 600px) {
+    .navbar-nav > li {
+        margin: 12px 18px;
+    }
+}
 
 
 /* Print */
