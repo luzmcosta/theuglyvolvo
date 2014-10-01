@@ -180,6 +180,7 @@ dd {
     width: 100%;
 }
 .social .widget_search {
+    display: none;
     margin: 24px;
 }
 .like,
