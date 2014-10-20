@@ -7,7 +7,7 @@
 
     <?php while ( have_posts() ) : the_post(); ?>
 
-    <div class="entry-content">
+    <div class="entry-content contact">
         <?php the_content(); ?>
     </div><!-- .entry-content -->
 
