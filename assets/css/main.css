@@ -140,35 +140,6 @@ dd {
     margin-bottom: 6px;
 }
 
-/* Buttons */
-.btn-primary,
-button,
-input[type="submit"] {
-    background: rgb(236, 37, 18);
-    border: none;
-    border-radius: 4px;
-    color: white;
-    height: 36px;
-    text-align: center;
-    padding: 0 1em;
-    width: 100%;
-}
-textarea,
-input[type="email"],
-input[type="text"] {
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 4px;
-    color: rgb(175, 175, 175);
-    margin: 0 0 1em 0;
-    padding: 6px 12px;
-    width: 100% !important;
-}
-textarea:focus,
-input[type="email"]:focus,
-input[type="text"]:focus {
-    color: rgb(0, 0, 0);
-}
-
 /* Containers + Wrappers */
 .container {}
 .social-navbar {
@@ -507,6 +478,38 @@ footer .widget_text a:hover {
 
 
 /* Form */
+.btn-primary,
+button,
+input[type="submit"] {
+    background: rgb(236, 37, 18);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    height: 36px;
+    text-align: center;
+    padding: 0 1em;
+    width: 100%;
+}
+label,
+input {
+    font-weight: 100;
+}
+textarea,
+input[type="email"],
+input[type="text"] {
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    color: rgb(175, 175, 175);
+    margin: 0 0 1em 0;
+    padding: 6px 12px;
+    width: 100% !important;
+}
+textarea:focus,
+input[type="email"]:focus,
+input[type="text"]:focus {
+    color: rgb(0, 0, 0);
+}
+
 .contact-form {
     margin-bottom: 3em;
 }
@@ -519,9 +522,6 @@ footer .widget_text a:hover {
 }
 .contact-form div:nth-child(3) {
     clear: both;
-}
-.contact-form label {
-    font-weight: 100;
 }
 .contact-form span {
     font-size: 0.8em;
