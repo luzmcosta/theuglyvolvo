@@ -141,7 +141,11 @@ dd {
 }
 
 /* Containers + Wrappers */
-.container {}
+.container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
 .social-navbar {
     background: rgba(255, 255, 255, 0.9);
     position: absolute;
