@@ -154,7 +154,7 @@ dd {
     padding: 12px 0 0 0;
 }
 .contact {
-    margin: 3em 0;
+    margin: 2em 0 3em 0;
 }
 
 .social,
@@ -515,6 +515,13 @@ input[type="text"]:focus {
 }
 .contact-form textarea {
     width: 100% !important;
+}
+.contact-form input[type="submit"] {
+    height: 42px;
+    line-height: 2;
+}
+.contact-form input[type="email"] {
+    max-width: 100%;
 }
 .contact-form div:not(:nth-child(3)) {
     float: left;
