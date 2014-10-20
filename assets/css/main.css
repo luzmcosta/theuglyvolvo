@@ -4,7 +4,7 @@
  * The Ugly Volvo WordPress theme's custom CSS.
  *
  * @author Luz M. Costa
- * @updated 09.30.2014
+ * @updated 10.19.2014
  * @version 0.1
  *
  * Notes:
@@ -140,6 +140,34 @@ dd {
     margin-bottom: 6px;
 }
 
+/* Buttons */
+.btn-primary,
+button,
+input[type="submit"] {
+    background: rgb(236, 37, 18);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    height: 36px;
+    text-align: center;
+    padding: 0 1em;
+    width: 100%;
+}
+textarea,
+input[type="email"],
+input[type="text"] {
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    color: rgb(175, 175, 175);
+    padding: 6px 12px;
+    width: 100% !important;
+}
+textarea:focus,
+input[type="email"]:focus,
+input[type="text"]:focus {
+    color: rgb(0, 0, 0);
+}
+
 /* Containers + Wrappers */
 .container {}
 .social-navbar {
@@ -152,6 +180,9 @@ dd {
     border-radius: 3px;
     border-top: 3px solid rgb(0, 0, 0);
     padding: 12px 0 0 0;
+}
+.contact {
+    margin: 3em 0;
 }
 
 .social,
@@ -182,6 +213,9 @@ dd {
 .social .widget_search {
     display: none;
     margin: 24px;
+}
+.social button.search-submit {
+    height: 34px;
 }
 .like,
 .retweet {
@@ -370,17 +404,57 @@ header {
     padding-right: 15px;
 }
 
-.btn-primary {
-    background: rgb(236, 37, 18);
-    border: none;
-}
-
 footer section {
     float: right;
     width: 50%;
     margin: 24px 48px;
     min-width: 250px;
     max-width: 450px;
+}
+footer .jetpack_subscription_widget {
+    background: black;
+    color: white;
+    float: none;
+    margin: 0;
+    padding: 1.5em 2em 2em 2em;
+    max-width: 100%;
+    width: 100%;
+}
+footer .jetpack_subscription_widget h3 {
+    height: 0;
+    margin: 0;
+}
+footer .jetpack_subscription_widget p {
+    display: inline-block;
+    margin: 0;
+}
+footer input[type=submit] {
+    border-radius: 0 3px 3px 0;
+    height: 36px;
+    padding: 0 30px;
+}
+footer #subscribe-text {
+    font-size: 1.72em;
+    vertical-align: middle;
+}
+footer #subscribe-email {
+    max-width: 98%;
+    width: 100%;
+}
+footer #subscribe-submit {
+    margin: 0 0 0 -120px;
+    position: absolute;
+}
+footer #subscribe-field {
+    border: none;
+    border-radius: 3px 0 0 3px;
+    color: rgb(175, 175, 175);
+    height: 36px;
+    padding: 0 1em;
+    width: 100%;
+}
+footer .jetpack_subscription_widget i {
+    margin-right: 0.5em;
 }
 footer .widget_twitter_timeline {
     float: left;
@@ -427,7 +501,19 @@ footer .widget_text a:hover {
 
 
 /* Form */
-
+.contact-form {
+    margin-bottom: 3em;
+}
+.contact-form textarea {
+    width: 100% !important;
+}
+.contact-form div:not(:nth-child(3)) {
+    float: left;
+    width: 50%;
+}
+.contact-form div:nth-child(3) {
+    clear: both;
+}
 
 /* Responsive */
 @media (max-width: 600px) {
