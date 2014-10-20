@@ -492,7 +492,7 @@ input[type="submit"] {
 }
 label,
 input {
-    font-weight: 100;
+    font-weight: 100 !important;
 }
 textarea,
 input[type="email"],
