@@ -364,6 +364,11 @@ header {
     color: rgb(236, 37, 18);
 }
 
+.contact h1 {
+    margin: 1em;
+    text-align: center;
+}
+
 /* Links and Menus */
 .pager .previous > a,
 .pager .previous > span,
