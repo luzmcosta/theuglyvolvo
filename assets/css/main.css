@@ -501,6 +501,23 @@ input[type="submit"] {
     padding: 0 1em;
     width: 100%;
 }
+.btn-primary:hover,
+button:hover,
+input[type="submit"]:hover {
+    border: 1px solid rgb(236, 37, 18);
+    background: white;
+    color: rgb(236, 37, 18);
+}
+.btn-primary:focus,
+.btn-primary:active,
+button:focus,
+button:active,
+input[type="submit"]:focus ,
+input[type="submit"]:active {
+    background: rgb(236, 37, 18);
+    border: none;
+    color: white;
+}
 label,
 input {
     font-weight: 100 !important;
