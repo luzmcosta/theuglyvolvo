@@ -291,6 +291,9 @@ h2 a:hover {
 .nivo-lightbox-overlay {
     background: rgba(0, 0, 0, 0.75);
 }
+.nivo-lightbox-close {
+    color: rgb(255,255,255);
+}
 
 /* Title and Content */
 main {
