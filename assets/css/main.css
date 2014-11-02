@@ -4,7 +4,7 @@
  * The Ugly Volvo WordPress theme's custom CSS.
  *
  * @author Luz M. Costa
- * @updated 10.19.2014
+ * @updated 11.02.2014
  * @version 0.1
  *
  * Notes:
@@ -218,7 +218,6 @@ dd {
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
     margin: auto;
-    max-width: 600px;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
@@ -234,12 +233,14 @@ dd {
 .navbar-nav > li {
     display: inline-block;
     float: none;
-    margin: 12px 18px;
-    max-width: 81px;
+    font-size: 1.25em;
+    font-weight: 300;
+    margin: 0.75em 1em;
+    max-width: 6em;
 }
 
 .navbar-nav > li > a {
-    display: table-caption;
+    display: inline-block;
     padding: 42px 0 0 0;
     text-align: center;
 }
@@ -256,29 +257,34 @@ h2 a:hover {
     text-decoration: none;
 }
 
+/* Main Header Menu */
 .menu-most-recent {
     background: url('../img/theuglyvolvo_recent.png') no-repeat center top;
     background-size: 27px;
 }
-
 .menu-most-popular {
     background: url('../img/theuglyvolvo_popular.png') no-repeat center top;
     background-size: 32px;
 }
-
-.menu-old-posts {
+.menu-old {
     background: url('../img/theuglyvolvo_archive.png') no-repeat center top;
     background-size: 32px;
 }
-
-.menu-parenting-postcards {
-    background: url('../img/theuglyvolvo_image.png') no-repeat center -9px;
-    background-size: 45px;
+.menu-stuff {
+    background: url('../img/theuglyvolvo_smile.png') no-repeat center top;
+    background-size: 35px;
 }
-
-.menu-contact-us {
+.menu-fence {
+    background: url('../img/theuglyvolvo_image.png') no-repeat center top;
+    background-size: 35px;
+}
+.menu-contact {
     background: url('../img/theuglyvolvo_contact.png') no-repeat center top;
     background-size: 35px;
+}
+/* Menu Descriptions */
+.menu-contact span.sub {
+    font-size: 0.9em;
 }
 
 /* Title and Content */
@@ -317,6 +323,7 @@ header {
 .home h2.entry-title {
     display: table-cell;
     font-size: 2rem;
+    font-weight: 600;
     margin: 12px 0 3px 0;
     vertical-align: middle;
     width: 276px;
@@ -497,6 +504,7 @@ input[type="submit"] {
 label,
 input {
     font-weight: 100 !important;
+    outline: none;
 }
 textarea,
 input[type="email"],
