@@ -28,6 +28,8 @@ function roots_scripts() {
       'css'       => '/assets/css/main.css',
       'js'        => '/assets/js/scripts.js',
       'modernizr' => '/assets/vendor/modernizr/modernizr.js',
+      'nivojs'    => '/assets/js/nivo-lightbox.min.js',
+      'nivocss'   => '/assets/css/nivo-lightbox.css',
       'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js'
     );
   } else {
@@ -45,6 +47,7 @@ function roots_scripts() {
   wp_enqueue_style('b_css', $assets['b_css'], false, null);
   wp_enqueue_style('icons', $assets['icons'], false, null);
   wp_enqueue_style('animate', get_template_directory_uri() . $assets['animate'], false, null);
+  wp_enqueue_style('nivocss', get_template_directory_uri() . $assets['nivocss'], false, null);
   wp_enqueue_style('roots_css', get_template_directory_uri() . $assets['css'], false, null);
 
   /**
@@ -64,6 +67,8 @@ function roots_scripts() {
 
   wp_enqueue_script('modernizr', get_template_directory_uri() . $assets['modernizr'], array(), null, false);
   wp_enqueue_script('jquery');
+  /* Load Nivo Lightbox after jQuery */
+  wp_enqueue_script('nivojs', get_template_directory_uri() . $assets['nivojs'], array(), null, true);
   wp_enqueue_script('roots_js', get_template_directory_uri() . $assets['js'], array(), null, true);
   wp_enqueue_script('b_js');
 }

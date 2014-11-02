@@ -32,3 +32,8 @@ searchIcon.off().click(function( event ) {
     // Remove current effect from el, and set new effect before toggling in/out.
     searchForm.removeClass( current ).addClass( effect ).fadeToggle();
 });
+
+/**
+ * Set lightbox effect on images.
+ */
+$( "img, a" ).nivoLightbox({ effect: "slideDown" });
