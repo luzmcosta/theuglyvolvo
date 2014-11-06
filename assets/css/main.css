@@ -233,7 +233,7 @@ dd {
 .navbar-nav > li {
     display: inline-block;
     float: none;
-    font-size: 1.25em;
+    font-size: 1em;
     font-weight: 300;
     margin: 0.75em 1em;
     max-width: 7em;
@@ -284,7 +284,7 @@ h2 a:hover {
 }
 /* Menu Descriptions */
 .menu-contact span.sub {
-    font-size: 0.9em;
+/*    font-size: 0.9em; */
 }
 
 /* Media */
