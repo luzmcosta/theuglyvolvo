@@ -25,7 +25,7 @@ function get_first_image() {
   $first_img = $matches[1][0];
 
   if(empty($first_img)) {
-    $first_img = "../assets/img/avatar_cat_looking_up.jpg";
+    $first_img = "/assets/img/avatar_cat_looking_up.jpg";
   }
 
   return $first_img;
