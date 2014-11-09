@@ -382,6 +382,7 @@ header {
     margin: 0.25em 1em;
     position: absolute;
     max-width: 17em;
+    width: 90%;
 }
 
 .home h2.entry-title {
