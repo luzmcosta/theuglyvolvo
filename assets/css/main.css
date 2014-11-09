@@ -24,7 +24,7 @@
 
     * Palette
         Colors
-        -    White: #F3F3F3 | rgb(243, 243, 243)
+        -    White: #F5F5F5 | rgb(245, 245, 245)
         -    Light Gray: #AFAFAF | rgb(175, 175, 175)
         -    Midtone Gray: #4B4B4B | rgb(75, 75, 75)
         -    Black: #292420 | rgb(41, 36, 32)
@@ -49,21 +49,24 @@
  */
 
 /* Fonts */
-@import url(http://fonts.googleapis.com/css?family=Coming+Soon);
+@import url(http://fonts.googleapis.com/css?family=Coming+Soon|Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
 
 /* Document Tags */
+html,
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: Lato, Century Gothic, sans-serif;
+}
+body {
     color: rgb(41, 36, 32);
 }
 
 ::selection {
     background: rgb(236, 37, 18); /* WebKit/Blink Browsers */
-    color: rgb(243, 243, 243);
+    color: rgb(245, 245, 245);
 }
 ::-moz-selection {
     background: rgb(236, 37, 18); /* Gecko Browsers */
-    color: rgb(243, 243, 243);
+    color: rgb(245, 245, 245);
 }
 
 h1,
@@ -73,9 +76,32 @@ h4,
 h5,
 h6 {
     color: rgb(41, 36, 32);
-    font-family: "Coming Soon", "Open Sans", sans-serif;
+    font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
 }
-
+h1,
+.h1 {
+    font-size: 2em;
+}
+h2,
+.h2 {
+    font-size: 1.75em;
+}
+h3,
+.h3 {
+    font-size: 1.5em;
+}
+h4,
+.h4 {
+    font-size: 1.25em;
+}
+h5,
+.h5 {
+    font-size: 1em;
+}
+h6,
+.h6 {
+    font-size: small;
+}
 a {
     color: rgb(236, 37, 18);
 }
@@ -100,7 +126,7 @@ figure {
 }
 figcaption {
     color: rgb(147, 147, 152);
-    font-family: "Coming Soon", "Open Sans", sans-serif;
+    font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
     font-size: 1em;
     margin: 2em 3em;
 }
@@ -119,7 +145,9 @@ ins {
 
 pre {
     color: rgb(75, 75, 75);
-    background: none;
+    background: rgb(245, 245, 245);
+    border: none;
+    padding: 2em;
 }
 
 blockquote,
@@ -141,11 +169,18 @@ td {
 }
 
 dt {
+    font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
+    font-weight: 900;
     margin-bottom: 3px;
 }
 dd {
+    border-image: url('../img/theuglyvolvo_border-bottom.png') 0 6 3 stretch;
     font-weight: 300;
-    margin-bottom: 6px;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+}
+dl {
+    padding: 1em;
 }
 
 /* Alignments */
@@ -163,6 +198,13 @@ dd {
     margin: 0;
     padding: 0;
     width: 100%;
+}
+.container-fluid {
+    padding: 0;
+}
+.row {
+    margin: 0;
+    padding: 0 4em;
 }
 .social-navbar {
     background: rgba(255, 255, 255, 0.9);
@@ -317,7 +359,6 @@ h2 a:hover {
 main {
     font-size: 1.3em;
     margin: auto;
-    text-align: center;
     max-width: 1600px;
 }
 
@@ -365,6 +406,7 @@ header {
 
 .home .entry-summary {
     margin: 75px 0 0 4px;
+    text-align: center;
 }
 
 .alert-warning {
@@ -423,7 +465,7 @@ nav.post-nav {
 }
 section#comments {
     clear: both;
-    margin: 2em;
+    margin: 2em 0;
 }
 footer section {
     float: right;
@@ -501,7 +543,7 @@ footer .widget_text a:hover {
 
 .copyright {
     background: rgb(41, 36, 32);
-    color: rgb(243, 243, 243);
+    color: rgb(245, 245, 245);
     padding: 3px;
 }
 
