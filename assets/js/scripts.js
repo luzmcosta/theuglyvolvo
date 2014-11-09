@@ -37,3 +37,18 @@ searchIcon.off().click(function( event ) {
  * Set lightbox effect on images.
  */
 $( "img, a" ).nivoLightbox({ effect: "slideDown" });
+
+/**
+ * Set grid layout.
+ */
+var $container = $( ".home main" );
+
+// initialize Masonry after all images have loaded
+$container.imagesLoaded(function() {
+    $container.masonry({
+        columnWidth: "article",
+        itemSelector: "article, nav",
+        gutter: 0,
+        transitionDuration: "0.5s"
+    });
+});
