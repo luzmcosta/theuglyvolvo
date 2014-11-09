@@ -27,6 +27,8 @@ function roots_scripts() {
       'animate'   => '/assets/css/animate.css',
       'css'       => '/assets/css/main.css',
       'js'        => '/assets/js/scripts.js',
+      'masonry'   => '/assets/js/masonry.pkgd.min.js',
+      'imgLoaded' => '/assets/js/imagesloaded.pkgd.min.js',
       'modernizr' => '/assets/vendor/modernizr/modernizr.js',
       'nivojs'    => '/assets/js/nivo-lightbox.min.js',
       'nivocss'   => '/assets/css/nivo-lightbox.css',
@@ -69,6 +71,10 @@ function roots_scripts() {
   wp_enqueue_script('jquery');
   /* Load Nivo Lightbox after jQuery */
   wp_enqueue_script('nivojs', get_template_directory_uri() . $assets['nivojs'], array(), null, true);
+  /* Load ImagesLoaded, a dependency of the Masonry implementation. */
+  wp_enqueue_script('imgLoaded', get_template_directory_uri() . $assets['imgLoaded'], array(), null, true);
+  /* Load Masonry. */
+  wp_enqueue_script('masonry', get_template_directory_uri() . $assets['masonry'], array(), null, true);
   wp_enqueue_script('roots_js', get_template_directory_uri() . $assets['js'], array(), null, true);
   wp_enqueue_script('b_js');
 }
