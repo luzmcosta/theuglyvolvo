@@ -19,13 +19,37 @@ add_filter('wp_title', 'roots_wp_title', 10);
 function get_first_image() {
   global $post, $posts;
   $first_img = '';
+
+  // Turn on output buffering.
   ob_start();
+
+  // Silently discard the buffer contents.
   ob_end_clean();
+
+  // Search the post content for an image.
   $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+
+  // Set the first image found as the image to be rendered.
   $first_img = $matches[1][0];
 
-  if(empty($first_img)) {
-    $first_img = "/wp-content/themes/theuglyvolvo/assets/img/avatar_cat_looking_up.jpg";
+  // If the post has no image associated with it...
+  if (empty($first_img)) {
+    // Set the array of possible default images to choose.
+    $defaults = array(
+        '/wp-content/themes/theuglyvolvo/assets/img/avatar_cat_close_up.jpg',
+        '/wp-content/themes/theuglyvolvo/assets/img/avatar_cat_looking_up.jpg',
+        '/wp-content/themes/theuglyvolvo/assets/img/avatar_cat_peeking_up.jpg',
+        '/wp-content/themes/theuglyvolvo/assets/img/avatar_cat_sideways_glance.jpg',
+        '/wp-content/themes/theuglyvolvo/assets/img/avatar_christopher_walken.jpg',
+        '/wp-content/themes/theuglyvolvo/assets/img/avatar_kitten_stare.jpg',
+        '/wp-content/themes/theuglyvolvo/assets/img/avatar_playful_kitten.jpg'
+    );
+
+    // Shuffle the array.
+    shuffle($defaults);
+
+    // Set first image in the shuffled array as the image to be rendered.
+    $first_img = $defaults[0];
   }
 
   return $first_img;
