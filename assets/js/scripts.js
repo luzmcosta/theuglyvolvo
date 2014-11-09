@@ -47,6 +47,7 @@ var $container = $( ".home main" );
 $container.imagesLoaded(function() {
     $container.masonry({
         columnWidth: "article",
+        isFitWidth: true,
         itemSelector: "article, nav",
         gutter: 0,
         transitionDuration: "0.5s"
