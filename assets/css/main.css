@@ -95,7 +95,15 @@ p {
             hyphens: auto;
     word-break: break-all;
 }
-
+figure {
+    margin: 0 auto;
+}
+figcaption {
+    color: rgb(147, 147, 152);
+    font-family: "Coming Soon", "Open Sans", sans-serif;
+    font-size: 1em;
+    margin: 2em 3em;
+}
 caption,
 time {
     font-size: 0.8em;
@@ -138,6 +146,16 @@ dt {
 dd {
     font-weight: 300;
     margin-bottom: 6px;
+}
+
+/* Alignments */
+.alignright {
+    float: right;
+    margin: 1em 0 3em 3em;
+}
+.alignnone,
+.alignleft {
+    margin: 3em;
 }
 
 /* Containers + Wrappers */
@@ -403,7 +421,10 @@ nav.post-nav {
 .next span {
     padding-right: 15px;
 }
-
+section#comments {
+    clear: both;
+    margin: 2em;
+}
 footer section {
     float: right;
     width: 50%;
