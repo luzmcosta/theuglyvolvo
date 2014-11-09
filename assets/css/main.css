@@ -4,7 +4,7 @@
  * The Ugly Volvo WordPress theme's custom CSS.
  *
  * @author Luz M. Costa
- * @updated 11.02.2014
+ * @updated 11.09.2014
  * @version 0.1
  *
  * Notes:
@@ -299,49 +299,49 @@ h2 a:hover {
 main {
     font-size: 1.3em;
     margin: auto;
-    max-width: 800px;
-    width: 95%;
+    text-align: center;
+    max-width: 1600px;
 }
 
 header {
-    margin: 0 0 30px 0;
+    margin: 0 0 2em 0;
     text-align: center;
-}
-
-.home main {
-    text-align: center;
-    max-width: 100%;
 }
 
 .home article {
-    background: url('../img/theuglyvolvo_border.png') no-repeat center top;
+    background: url('../img/theuglyvolvo_border-top.png') no-repeat center top;
+    border-image: url('../img/theuglyvolvo_border-bottom.png') 0 0 3 stretch;
     display: inline-block;
-    height: 360px;
-    margin: 3px 6px 12px 6px;
-    width: 309px;
+    margin: 0.25em 0.5em 1em 0.5em;
+    padding-bottom: 1em;
+    min-width: 17em;
 }
 
 .home article header {
     display: table;
-    height: 75px;
-    margin: 3px 12px 3px 18px;
+    min-height: 75px;
+    margin: 0.25em 1em;
     position: absolute;
+    max-width: 17em;
 }
 
 .home h2.entry-title {
     display: table-cell;
     font-size: 2rem;
     font-weight: 600;
-    margin: 12px 0 3px 0;
     vertical-align: middle;
-    width: 276px;
+    max-width: 17em;
 }
 
 .home article img {
-    /* float: none; */
-    height: 250px;
     margin: 6px 0;
+    max-height: 250px;
+    max-width: 275px;
     text-align: center;
+}
+
+.home article .thumbnail-wrapper {
+    height: 250px;
     width: 275px;
 }
 
