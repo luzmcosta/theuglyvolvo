@@ -361,6 +361,10 @@ header {
 }
 
 /* Links and Menus */
+nav.post-nav {
+    margin: 0.25em 0.5em 1em 0.5em;
+    min-width: 17em;
+}
 .pager .previous > a,
 .pager .previous > span,
 .pager .next > a,
