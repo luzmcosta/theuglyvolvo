@@ -501,6 +501,13 @@ section#comments {
 section#respond {
     margin: 3em 0;
 }
+div#jp-relatedposts {
+    clear: both;
+}
+div#jp-relatedposts h3.jp-relatedposts-headline {
+    font-size: 1em;
+}
+
 footer section {
     float: right;
     width: 50%;
