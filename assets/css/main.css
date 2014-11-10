@@ -313,6 +313,7 @@ dl {
     font-weight: 300;
     margin: 0.75em 1em;
     max-width: 7em;
+    min-width: 4em;
 }
 
 .navbar-nav > li > a {
@@ -352,6 +353,10 @@ h2 a:hover {
 }
 .menu-fence {
     background: url('../img/theuglyvolvo_image.png') no-repeat center top;
+    background-size: 35px;
+}
+.menu-about {
+    background: url('../img/theuglyvolvo_woman.png') no-repeat center top;
     background-size: 35px;
 }
 .menu-contact {
