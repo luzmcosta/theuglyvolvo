@@ -696,8 +696,14 @@ input[type="text"]:focus {
 .contact-form {
     margin-bottom: 3em;
 }
+.contact-form label {
+    font-weight: 400 !important;
+}
 .contact-form textarea {
     width: 100% !important;
+}
+.contact-form input {
+    font-weight: 300 !important;
 }
 .contact-form input[type="submit"] {
     height: 42px;
