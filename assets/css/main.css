@@ -188,17 +188,21 @@ dl {
 }
 
 /* Alignments */
-.alignright {
+.alignright,
+.size-full.alignright {
     float: right;
     margin: 1em 0 1em 3em;
 }
-.alignleft {
+.alignleft,
+.size-full.alignleft {
     margin: 1em 3em 1em 0;
 }
-.aligncenter {
+.aligncenter,
+.size-full.aligncenter {
     margin: 1em 0;
 }
-.alignnone {
+.alignnone,
+.size-full.alignnone {
     margin: 3em 0;
 }
 .size-full {
