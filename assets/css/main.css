@@ -128,7 +128,11 @@ figcaption {
     color: rgb(147, 147, 152);
     font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
     font-size: 1em;
-    margin: 2em 3em;
+    margin: 1em 3em;
+    text-align: center;
+}
+.size-full + figcaption {
+    margin: 0.25em 0;
 }
 caption,
 time {
@@ -186,11 +190,19 @@ dl {
 /* Alignments */
 .alignright {
     float: right;
-    margin: 1em 0 3em 3em;
+    margin: 1em 0 1em 3em;
 }
-.alignnone,
 .alignleft {
-    margin: 3em;
+    margin: 1em 3em 1em 0;
+}
+.aligncenter {
+    margin: 1em 0;
+}
+.alignnone {
+    margin: 3em 0;
+}
+.size-full {
+    margin: 1em 0;
 }
 
 /* Containers + Wrappers */
