@@ -468,6 +468,9 @@ section#comments {
     clear: both;
     margin: 2em 0;
 }
+section#respond {
+    margin: 3em 0;
+}
 footer section {
     float: right;
     width: 50%;
