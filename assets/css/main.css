@@ -58,6 +58,8 @@ body {
 }
 body {
     color: rgb(41, 36, 32);
+    -ms-word-wrap: break-word;
+        word-wrap: break-word;
 }
 
 ::selection {
@@ -396,9 +398,11 @@ header {
     padding-bottom: 1em;
     min-width: 17em;
 }
+.img-thumbnail {
+    border: none;
+}
 
 .home article header {
-    display: table;
     min-height: 75px;
     margin: 0.25em 1em;
     position: absolute;
@@ -407,7 +411,6 @@ header {
 }
 
 .home h2.entry-title {
-    display: table-cell;
     font-size: 2rem;
     font-weight: 600;
     vertical-align: middle;
@@ -435,6 +438,12 @@ header {
     background: none;
     border: 1px solid rgb(236, 37, 18);
     color: rgb(236, 37, 18);
+}
+.error404 form.search-form {
+    margin-bottom: 3em;
+}
+.error404 .form-control {
+    height: 36px;
 }
 
 .contact h1 {
