@@ -371,6 +371,9 @@ h2 a:hover {
 }
 
 /* Media */
+.img-thumbnail {
+    border: none;
+}
 .nivo-lightbox-overlay {
     background: rgba(0, 0, 0, 0.75);
 }
@@ -397,9 +400,6 @@ header {
     margin: 0.25em 0.5em 1em 0.5em;
     padding-bottom: 1em;
     min-width: 17em;
-}
-.img-thumbnail {
-    border: none;
 }
 
 .home article header {
