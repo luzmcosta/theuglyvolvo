@@ -13,7 +13,7 @@
             echo '<img src="' . get_first_image() . '" alt="" />';
             echo '</a>';
         }
-?>
+    ?>
 
     <?php // the_excerpt(); ?>
   </div>
