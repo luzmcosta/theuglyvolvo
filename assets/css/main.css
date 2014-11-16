@@ -584,7 +584,8 @@ footer .jetpack_subscription_widget p {
 footer input[type=submit] {
     border-radius: 0.25rem;
     height: 4rem;
-    padding: 0 30px;
+    margin-top: 1rem;
+    padding: 0 9ch;
 }
 footer #subscribe-text {
     font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
@@ -596,10 +597,14 @@ footer #subscribe-email {
     width: 100%;
 }
 footer #subscribe-field {
+    background: none;
     border: none;
+    border-bottom: 3px solid white;
     border-radius: 0.25rem;
+    color: white;
     height: 4rem;
     padding: 0 1em;
+    width:25ch;
 }
 footer .jetpack_subscription_widget i {
     margin-right: 0.5em;
@@ -665,7 +670,7 @@ input[type="submit"] {
 .btn-primary:hover,
 button:hover,
 input[type="submit"]:hover {
-    background: rgb(245, 245, 245);
+    background: rgb(255, 255, 255);
     color: rgb(236, 37, 18);
 }
 .btn-primary:focus,
@@ -686,8 +691,7 @@ textarea,
 input[type="email"],
 input[type="text"] {
     border: 1px solid rgb(0, 0, 0);
-    border-radius: 4px;
-    color: rgb(175, 175, 175);
+    border-radius: 0.25rem;
     margin: 1rem 0;
     padding: 6px 12px;
     width: 100% !important;
