@@ -393,13 +393,20 @@ header {
     text-align: center;
 }
 
-.home article {
+.home article,
+.page .entry-content {
     background: url('../img/theuglyvolvo_border-top.png') no-repeat center top;
     border-image: url('../img/theuglyvolvo_border-bottom.png') 0 0 3 stretch;
     display: inline-block;
     margin: 0.25em 0.5em 1em 0.5em;
     padding-bottom: 1em;
     min-width: 17em;
+}
+
+.page h2.entry-title {
+    margin: 1em 0;
+    padding: 0 1em;
+    text-align: center;
 }
 
 .home article header {
@@ -410,26 +417,30 @@ header {
     width: 90%;
 }
 
-.home h2.entry-title {
+.home h2.entry-title,
+.page h2.entry-title {
     font-size: 2rem;
     font-weight: 600;
     vertical-align: middle;
     max-width: 17em;
 }
 
-.home article img {
+.home article img,
+.page .entry-content img {
     margin: 6px 0;
     max-height: 250px;
     max-width: 275px;
     text-align: center;
 }
 
-.home article .thumbnail-wrapper {
+.home article .thumbnail-wrapper,
+.page .entry-content .thumbnail-wrapper {
     height: 250px;
     width: 275px;
 }
 
-.home .entry-summary {
+.home .entry-summary,
+.page .entry-summary {
     margin: 75px 0 0 4px;
     text-align: center;
 }
