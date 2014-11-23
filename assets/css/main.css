@@ -349,16 +349,12 @@ h2 a:hover {
     background: url('../img/theuglyvolvo_archive.png') no-repeat center top;
     background-size: 32px;
 }
-.menu-stuff {
-    background: url('../img/theuglyvolvo_smile.png') no-repeat center top;
-    background-size: 35px;
-}
 .menu-fence {
     background: url('../img/theuglyvolvo_image.png') no-repeat center top;
     background-size: 35px;
 }
 .menu-about {
-    background: url('../img/theuglyvolvo_woman.png') no-repeat center top;
+    background: url('../img/theuglyvolvo_smile.png') no-repeat center top;
     background-size: 35px;
 }
 .menu-contact {
