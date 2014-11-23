@@ -4,7 +4,7 @@
  * The Ugly Volvo WordPress theme's custom CSS.
  *
  * @author Luz M. Costa
- * @updated 11.09.2014
+ * @updated 11.23.2014
  * @version 0.1
  *
  * Notes:
@@ -612,6 +612,12 @@ footer .jetpack_subscription_widget i {
 footer .widget_twitter_timeline {
     float: left;
     left: 0;
+}
+footer .widget_twitter_timeline h3 {
+    background: url(/theuglyvolvo/wp-content/themes/theuglyvolvo/assets/img/theuglyvolvo_twitter.png) 1rem 0 no-repeat;
+    background-size: 48px;
+    line-height: 2;
+    padding-left: 69px;
 }
 footer .widget_text a {
     color: rgb(41, 36, 32);
