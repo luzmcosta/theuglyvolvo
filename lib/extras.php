@@ -1,5 +1,10 @@
 <?php
 /**
+* Enable using shortcodes in widgets.
+*/
+add_filter('widget_text', 'do_shortcode');
+
+/**
  * Manage output of wp_title()
  */
 function roots_wp_title($title) {
