@@ -610,7 +610,7 @@ footer .widget_twitter_timeline {
     left: 0;
 }
 footer .widget_twitter_timeline h3 {
-    background: url(/theuglyvolvo/wp-content/themes/theuglyvolvo/assets/img/theuglyvolvo_twitter.png) 1rem 0 no-repeat;
+    background: url(../img/theuglyvolvo_twitter.png) 1rem 0 no-repeat;
     background-size: 48px;
     line-height: 2;
     padding-left: 69px;
