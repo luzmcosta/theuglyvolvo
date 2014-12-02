@@ -15,8 +15,16 @@
     </div>
 
     <div class="header-brand">
+        <div class="floor"></div>
+
         <div>
-            <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" /></a>
+            <a href="<?php echo esc_url(home_url('/')); ?>">
+                <picture>
+                    <img src="/theuglyvolvo/wp-content/themes/theuglyvolvo/assets/img/theuglyvolvo_logo_v3.png"
+                        alt="<?php echo( get_bloginfo( 'title' ) ); ?>"
+                    />
+                <picture>
+            </a>
         </div>
     </div>
 
