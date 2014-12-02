@@ -232,8 +232,6 @@ dl {
 }
 .header-brand {}
 .header-navbar {
-    border-radius: 3px;
-    border-top: 3px solid rgb(0, 0, 0);
     padding: 12px 0 0 0;
 }
 .contact {
@@ -297,6 +295,15 @@ dl {
 }
 .header-brand img {
     height: 500px;
+}
+.floor {
+    border-bottom: 3px solid black;
+    border-radius: 3px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -10;
 }
 
 .navbar-default {
