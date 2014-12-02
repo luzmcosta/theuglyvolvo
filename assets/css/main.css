@@ -250,20 +250,30 @@ dl {
     position: absolute;
     right: 30px;
 }
-
-.social .widget,
 .social .textwidget > div {
+    display: inline-block;
+    margin: 1rem;
+}
+.social .widget {
     float: left;
 }
 .social .textwidget a {
     margin: 6px 15px 0 0;
 }
-.social .textwidget > div > span,
 .social .textwidget a {
     clear: both;
-    float: left;
     text-align: center;
     width: 100%;
+}
+.social img {
+    max-height: 48px;
+    max-width: 48px;
+}
+.social span {
+    clear: both;
+    display: block;
+    font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
+    margin: 0 1rem;
 }
 .social .widget_search {
     display: none;
