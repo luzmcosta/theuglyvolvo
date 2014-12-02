@@ -360,6 +360,9 @@ h2 a:hover {
     background: url('../img/theuglyvolvo_recent.png') no-repeat center top;
     background-size: 27px;
 }
+.home .menu-most-recent a {
+    color: rgb(236, 37, 18) !important;
+}
 .menu-most-popular {
     background: url('../img/theuglyvolvo_popular.png') no-repeat center top;
     background-size: 32px;
