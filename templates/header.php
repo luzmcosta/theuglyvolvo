@@ -20,7 +20,7 @@
         <div>
             <a href="<?php echo esc_url(home_url('/')); ?>">
                 <picture>
-                    <img src="/theuglyvolvo/wp-content/themes/theuglyvolvo/assets/img/theuglyvolvo_logo_v3.png"
+                    <img src="/wp-content/themes/theuglyvolvo/assets/img/theuglyvolvo_logo_v3.png"
                         alt="<?php echo( get_bloginfo( 'title' ) ); ?>"
                     />
                 <picture>
