@@ -19,6 +19,37 @@ function roots_wp_title($title) {
 add_filter('wp_title', 'roots_wp_title', 10);
 
 /**
+ * Returns a random item from the given array.
+ */
+function random($defaults) {
+    // Shuffle the array.
+    shuffle($defaults);
+
+    // Set first image in the shuffled array as the image to be rendered.
+    $item = $defaults[0];
+
+    return $item;
+}
+
+/**
+ * Returns the path to an avatar picked randomly from an array of images.
+ */
+function getAvatar() {
+    // Set the array of possible default images to choose.
+    $defaults = array(
+        '/wp-content/themes/theuglyvolvo/assets/img/avatar_cat_close_up.jpg',
+        '/wp-content/themes/theuglyvolvo/assets/img/avatar_cat_looking_up.jpg',
+        '/wp-content/themes/theuglyvolvo/assets/img/avatar_cat_peeking_up.jpg',
+        '/wp-content/themes/theuglyvolvo/assets/img/avatar_cat_sideways_glance.jpg',
+        '/wp-content/themes/theuglyvolvo/assets/img/avatar_christopher_walken.jpg',
+        '/wp-content/themes/theuglyvolvo/assets/img/avatar_kitten_stare.jpg',
+        '/wp-content/themes/theuglyvolvo/assets/img/avatar_playful_kitten.jpg'
+    );
+
+    random($defaults);
+}
+
+/**
  * Gets the first image in a post.
  */
 function get_first_image() {
@@ -39,22 +70,7 @@ function get_first_image() {
 
   // If the post has no image associated with it...
   if (empty($first_img)) {
-    // Set the array of possible default images to choose.
-    $defaults = array(
-        '/wp-content/themes/theuglyvolvo/assets/img/avatar_cat_close_up.jpg',
-        '/wp-content/themes/theuglyvolvo/assets/img/avatar_cat_looking_up.jpg',
-        '/wp-content/themes/theuglyvolvo/assets/img/avatar_cat_peeking_up.jpg',
-        '/wp-content/themes/theuglyvolvo/assets/img/avatar_cat_sideways_glance.jpg',
-        '/wp-content/themes/theuglyvolvo/assets/img/avatar_christopher_walken.jpg',
-        '/wp-content/themes/theuglyvolvo/assets/img/avatar_kitten_stare.jpg',
-        '/wp-content/themes/theuglyvolvo/assets/img/avatar_playful_kitten.jpg'
-    );
-
-    // Shuffle the array.
-    shuffle($defaults);
-
-    // Set first image in the shuffled array as the image to be rendered.
-    $first_img = $defaults[0];
+      $first_img = '/theuglyvolvo/wp-content/themes/theuglyvolvo/assets/img/theuglyvolvo_default_img@275.jpg';
   }
 
   return $first_img;
