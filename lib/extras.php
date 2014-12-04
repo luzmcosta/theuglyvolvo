@@ -34,19 +34,19 @@ function random($defaults) {
 /**
  * Returns the path to an avatar picked randomly from an array of images.
  */
-function getAvatar() {
+function avatar() {
     // Set the array of possible default images to choose.
-    $defaults = array(
-        '/wp-content/themes/theuglyvolvo/assets/img/avatar_cat_close_up.jpg',
-        '/wp-content/themes/theuglyvolvo/assets/img/avatar_cat_looking_up.jpg',
-        '/wp-content/themes/theuglyvolvo/assets/img/avatar_cat_peeking_up.jpg',
-        '/wp-content/themes/theuglyvolvo/assets/img/avatar_cat_sideways_glance.jpg',
-        '/wp-content/themes/theuglyvolvo/assets/img/avatar_christopher_walken.jpg',
-        '/wp-content/themes/theuglyvolvo/assets/img/avatar_kitten_stare.jpg',
-        '/wp-content/themes/theuglyvolvo/assets/img/avatar_playful_kitten.jpg'
+    $images = array(
+        get_bloginfo('template_directory') . 'assets/img/avatar_cat_close_up_64.jpg',
+        get_bloginfo('template_directory') . '/assets/img/avatar_cat_looking_up_64.jpg',
+        get_bloginfo('template_directory') . '/assets/img/avatar_cat_peeking_up_64.jpg',
+        get_bloginfo('template_directory') . '/assets/img/avatar_cat_sideways_glance_64.jpg',
+        get_bloginfo('template_directory') . '/assets/img/avatar_christopher_walken_64.jpg',
+        get_bloginfo('template_directory') . '/assets/img/avatar_kitten_stare_64.jpg',
+        get_bloginfo('template_directory') . '/assets/img/avatar_playful_kitten_64.jpg'
     );
 
-    random($defaults);
+    return random($images);
 }
 
 /**

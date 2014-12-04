@@ -1,5 +1,11 @@
 <div class="comment-meta">
-    <?php echo get_avatar($comment, $size = '64'); ?>
+    <?php
+        if (validate_gravatar($comment->comment_ID)) {
+            echo get_avatar($comment, $size = '64');
+        }else{
+            echo '<img src="' . avatar() . '" alt="Avatar" />';
+        }
+    ?>
 
     <h4 class="media-heading"><?php echo get_comment_author_link(); ?></h4>
 
