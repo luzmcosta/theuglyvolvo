@@ -70,7 +70,7 @@ function get_first_image() {
 
   // If the post has no image associated with it...
   if (empty($first_img)) {
-      $first_img = '/theuglyvolvo/wp-content/themes/theuglyvolvo/assets/img/theuglyvolvo_default_img@275.jpg';
+      $first_img = '/wp-content/themes/theuglyvolvo/assets/img/theuglyvolvo_default_img@275.jpg';
   }
 
   return $first_img;
