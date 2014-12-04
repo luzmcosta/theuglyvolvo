@@ -4,7 +4,7 @@
  * The Ugly Volvo WordPress theme's custom CSS.
  *
  * @author Luz M. Costa
- * @updated 11.23.2014
+ * @updated 12.03.2014
  * @version 0.1
  *
  * Notes:
@@ -256,10 +256,8 @@ dl {
     float: left;
 }
 .social .textwidget a {
-    margin: 6px 15px 0 0;
-}
-.social .textwidget a {
     clear: both;
+    margin: 6px 15px 0 0;
     text-align: center;
     width: 100%;
 }
@@ -536,9 +534,18 @@ section#respond h3 {
 li.comment {
     display: inline-flex;
 }
+li.comment > div {
+    display: inline-block;
+    vertical-align: top;
+}
+.media-body {
+    margin: 0 3rem;
+}
+.comment-meta {
+    float: left;
+}
 .comment-meta > * {
     clear: both;
-    float: left;
     font-size: small;
     text-align: center;
     width: 100%;
