@@ -9,7 +9,7 @@
 
     <?php while ( have_posts() ) : the_post(); ?>
 
-    <div class="entry-content most-popular-posts">
+    <article class="entry-content most-popular-posts">
         <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
         <?php if ( get_the_post_thumbnail($post_id) != '' ) {
@@ -22,7 +22,7 @@
                 echo '</a>';
             }
         ?>
-    </div><!-- .entry-content -->
+    </article><!-- .entry-content -->
 
     <?php endwhile; // end of the loop. ?>
 
