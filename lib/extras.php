@@ -37,7 +37,7 @@ function random($defaults) {
 function avatar() {
     // Set the array of possible default images to choose.
     $images = array(
-        get_bloginfo('template_directory') . 'assets/img/avatar_cat_close_up_64.jpg',
+        get_bloginfo('template_directory') . '/assets/img/avatar_cat_close_up_64.jpg',
         get_bloginfo('template_directory') . '/assets/img/avatar_cat_looking_up_64.jpg',
         get_bloginfo('template_directory') . '/assets/img/avatar_cat_peeking_up_64.jpg',
         get_bloginfo('template_directory') . '/assets/img/avatar_cat_sideways_glance_64.jpg',
