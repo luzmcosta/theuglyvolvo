@@ -2,7 +2,7 @@
 /* Template Name: Galleries */
 ?>
 
-<div id="primary" class="site-content">
+<div id="primary" class="site-content gallery">
     <div id="content" role="main">
 
         <ul>
