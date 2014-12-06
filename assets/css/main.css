@@ -461,6 +461,14 @@ header {
     margin: 1rem 0 0 4px;
     text-align: center;
 }
+.gallery ul {
+    padding: 0;
+    text-align: center;
+}
+.gallery li {
+    list-style-type: none;
+    margin: 4rem auto;
+}
 
 .alert-warning {
     background: none;
