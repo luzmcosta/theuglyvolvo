@@ -71,6 +71,12 @@ body {
     color: rgb(245, 245, 245);
 }
 
+p {
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 3rem auto;
+    max-width: 80ch;
+}
 h1,
 h2,
 h3,
@@ -122,7 +128,7 @@ p {
        -moz-hyphens: auto;
         -ms-hyphens: auto;
             hyphens: auto;
-    word-break: break-all;
+    word-break: keep-all;
 }
 figure {
     margin: 0 auto;
@@ -518,26 +524,43 @@ nav.post-nav {
 }
 section#comments {
     clear: both;
-    margin: 2em 0;
+    margin: 6rem 0;
 }
 section#comments h3,
 section#respond h3 {
+    border-bottom: 1px solid red;
     font-family: Lato, Century Gothic, sans-serif;
     font-weight: 600;
     font-size: 1em;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
 }
-li.comment {
-    display: inline-flex;
+.media-list > li {
+    border-left: 3px solid red;
+    margin-bottom: 3rem;
+    padding-left: 2rem;
 }
-li.comment > div {
-    display: inline-block;
-    vertical-align: top;
+li.comment p {
+    margin: 0 auto 2rem 2rem;
+}
+li.comment li {
+    border-left: 3px solid rgb(236, 37, 18);
+    border-radius: 3px;
+    margin: 2rem;
+    padding: 3rem;
+}
+li.comment.bypostauthor > .comment-meta .media-heading {
+    color: red;
 }
 .media-body {
     margin: 0 3rem;
 }
 .comment-meta {
+    display: inline-block;
     float: left;
+    margin-bottom: 2rem;
+    text-align: center;
+    vertical-align: top;
 }
 .comment-meta > * {
     clear: both;
@@ -559,6 +582,7 @@ li.comment > div {
     text-decoration: none;
 }
 .comment-meta .media-heading {
+    font-size: 2rem;
     font-weight: 600;
     margin: 1em 0;
 }
@@ -728,6 +752,7 @@ input[type="submit"] {
 button:hover,
 input[type="submit"]:hover {
     background: rgb(255, 255, 255);
+    border: 3px solid rgb(236, 37, 18);
     color: rgb(236, 37, 18);
 }
 .btn-primary:focus,
