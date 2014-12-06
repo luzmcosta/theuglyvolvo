@@ -58,7 +58,7 @@
                     echo $img_close;
 
                     // Set the image caption.
-                    echo '<caption>' . $name . '</caption>';
+                    echo '<figcaption>' . $name . '</figcaption>';
 
                     // Close the list item element.
                     echo $li_close;
