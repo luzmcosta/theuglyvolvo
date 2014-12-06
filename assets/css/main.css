@@ -422,12 +422,15 @@ header {
 
 .page h2.entry-title {
     margin: 1em 0;
-    padding: 0 1em;
-    text-align: center;
 }
-
+.page .entry-content h2 {
+    margin: 2rem 1rem;
+}
 .home article header {
     margin: 0.25em 1em;
+}
+.home article header,
+.page .entry-content h2 {
     max-width: 14em;
 }
 
@@ -436,7 +439,6 @@ header {
     font-size: 2rem;
     font-weight: 600;
     vertical-align: middle;
-    max-width: 17em;
 }
 
 .home article img,
@@ -446,15 +448,10 @@ header {
     max-width: 275px;
     text-align: center;
 }
-
-.home article .thumbnail-wrapper,
-.page .entry-content .thumbnail-wrapper {
-    height: 250px;
-    width: 275px;
+.entry-content.most-popular-posts {
+    text-align: center;
 }
-
-.home .entry-summary,
-.page .entry-summary {
+.home .entry-summary {
     margin: 1rem 0 0 4px;
     text-align: center;
 }
