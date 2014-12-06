@@ -427,11 +427,8 @@ header {
 }
 
 .home article header {
-    min-height: 75px;
     margin: 0.25em 1em;
-    position: absolute;
-    max-width: 17em;
-    width: 90%;
+    max-width: 14em;
 }
 
 .home h2.entry-title,
@@ -458,7 +455,7 @@ header {
 
 .home .entry-summary,
 .page .entry-summary {
-    margin: 75px 0 0 4px;
+    margin: 1rem 0 0 4px;
     text-align: center;
 }
 
