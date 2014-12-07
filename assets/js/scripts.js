@@ -59,9 +59,11 @@ $container.imagesLoaded(function() {
  */
 window.fbAsyncInit = function() {
     FB.init({
-        appId: '700636043345419',
+        appId: "700636043345419",
+        cookie: true,
+        status: true,
         xfbml: true,
-        version: 'v2.1'
+        version: "v2.2"
     });
 };
 
@@ -72,3 +74,23 @@ window.fbAsyncInit = function() {
     js.src = "//connect.facebook.net/en_US/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
+/**
+ * Set Facebook like event on UI element.
+ */
+$( ".fa-facebook" ).on( "click", function() {
+    console.log( "Facebook %o", FB );
+    FB.ui(
+        {
+            method: "share",
+            href: window.location.href
+        },
+        function( response ) {
+            console.log( "Facebook response is %o", response );
+
+            // Handle error.
+
+            // Handle success.
+        }
+    );
+});
