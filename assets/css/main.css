@@ -4,7 +4,7 @@
  * The Ugly Volvo WordPress theme's custom CSS.
  *
  * @author Luz M. Costa
- * @updated 12.06.2014
+ * @updated 12.07.2014
  * @version 0.1
  *
  * Notes:
@@ -247,6 +247,40 @@ dl {
 .social,
 .share {
     /*display: none;*/
+}
+.share-post {
+    text-align: center;
+}
+.share-post span {
+    border-radius: 1rem;
+    color: white;
+    display: inline-block;
+    padding: 1rem;
+    text-align: center;
+    width: 12rem;
+    z-index: 1;
+}
+.share-post span:first-child {
+    background: rgb(187, 187, 187);
+}
+.share-post span:nth-child(2) {
+    background: white;
+    border-radius: 2rem;
+    color: rgb(75, 75, 75);
+    height: 4rem;
+    left: -2rem;
+    line-height: 2rem;
+    padding: 0.75rem 0.75rem;
+    position: relative;
+    vertical-align: middle;
+    width: 4rem;
+    z-index: 2;
+}
+.share-post span:nth-child(3) {
+    background: rgb(155, 155, 155);
+    left: -4rem;
+    position: relative;
+    z-index: 1;
 }
 .menu-icon {
     float: right;

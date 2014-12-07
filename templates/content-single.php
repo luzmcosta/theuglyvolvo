@@ -7,6 +7,13 @@
     <div class="entry-content">
       <?php the_content(); ?>
     </div>
+
+    <div class="share-post">
+        <span>Like</span>
+        <span>or</span>
+        <span>Tweet</span>
+    </div>
+
     <footer>
       <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>')); ?>
     </footer>
