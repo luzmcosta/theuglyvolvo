@@ -687,7 +687,15 @@ footer .widget_text a {
 footer .widget_text a:hover {
     color: rgb(236, 37, 18);
 }
-
+.fa-facebook,
+.twitter-share {
+    color: rgb(236, 37, 18);
+    margin: 1rem;
+}
+.fa-facebook:hover,
+.twitter-share:hover {
+    color: rgb(41, 36, 32);
+}
 footer .widget_facebook-like-box {
     border: 1px solid #e5e6e9;
     padding: 2rem 24px;
