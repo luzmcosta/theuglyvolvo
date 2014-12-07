@@ -108,3 +108,11 @@ class Menu_With_Description extends Walker_Nav_Menu {
 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 	}
 }
+
+/**
+ * Displays the Facebook follower count.
+ */
+function facebook_count( $username ) {
+    $facebook_count = file_get_contents( 'http://graph.facebook.com/' . $username );
+    return json_decode( $facebook_count )->likes;
+}
