@@ -708,8 +708,8 @@ footer .widget_twitter_timeline h3 {
     background: url(../img/theuglyvolvo_twitter.png) 0 0 no-repeat;
     background-size: 57px;
     border-image: url('../img/theuglyvolvo_border-bottom.png') 0 0 3 stretch;
-    font-size: 3rem;
-    line-height: 2;
+    font-size: 2rem;
+    line-height: 3;
     padding-left: 60px;
 }
 footer .widget_text a {
@@ -721,32 +721,37 @@ footer .widget_text a {
 footer .widget_text a:hover {
     color: rgb(236, 37, 18);
 }
-.fa-facebook,
-.twitter-share {
+.like_page,
+.tweet_page {
     color: rgb(236, 37, 18);
     margin: 1rem;
 }
-.fa-facebook:hover,
-.twitter-share:hover {
+.like_page:hover,
+.tweet_page:hover {
     color: rgb(41, 36, 32);
+}
+.twitter-follow {
+    float: right;
+    margin: 1.5rem 1rem;
+}
+.twitter-follow button {
+    height: 3rem;
+    width: 8rem;
 }
 footer .widget_facebook-like-box {
     border: 1px solid #e5e6e9;
     padding: 2rem 24px;
-}
-.fb-like.fb_iframe_widget {
-    opacity: 0;
 }
 .theuglyvolvo_on_facebook img {
     border-radius: 4px;
     margin-right: 12px;
 }
 .theuglyvolvo_on_facebook h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 1rem 0;
 }
-#theuglyvolvo_like_button,
-#theuglyvolvo_like_button > span {
+#like_site,
+#like_site > span {
     float: right;
     width: 48px;
 }
@@ -754,11 +759,10 @@ footer .widget_facebook-like-box {
     padding-bottom: 4rem;
 }
 #theuglyvolvo_like button {
-    font-size: 12px;
-    height: 20px;
-    width: 48px;
+    height: 3rem;
+    width: 8rem;
     display: block;
-    margin-top: -20px;
+    margin: 1rem;
 }
 li.feed-item {
     list-style: none;
