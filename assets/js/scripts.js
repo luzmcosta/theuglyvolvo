@@ -42,7 +42,9 @@
     /**
      * Set grid layout.
      */
-    var $container = $( ".home main" );
+    var selectors = ".home main, .page-template-page-popular-php main," +
+            " .page-template-archives-php main",
+        $container = $( selectors );
 
     // initialize Masonry after all images have loaded
     $container.imagesLoaded(function() {
