@@ -428,6 +428,9 @@ h2 a:hover {
 }
 
 /* Media */
+.page-template-archives-php .thumbnail-wrapper {
+    margin-left: 3px;
+}
 .img-thumbnail {
     border: none;
 }
@@ -458,6 +461,7 @@ header {
     margin: 0.25em 0.5em 1em 0.5em;
     padding-bottom: 1em;
     min-width: 17em;
+    text-align: center;
 }
 
 .page h2.entry-title {
