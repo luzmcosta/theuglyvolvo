@@ -20,7 +20,7 @@
         <div>
             <a href="<?php echo esc_url(home_url('/')); ?>">
                 <picture>
-                    <img src="<?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo_v3.png"
+                    <img src="<?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@2x.png"
                         alt="<?php echo( get_bloginfo( 'title' ) ); ?>"
                     />
                 <picture>
