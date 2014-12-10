@@ -788,9 +788,12 @@ span.feed-date {
     color: rgb(245, 245, 245);
 }
 .copyright small {
-    margin: 1rem;
+    display: block;
+    padding: 1rem;
 }
-
+.fa-copyright {
+    margin-right: 0.5rem;
+}
 
 /* Table */
 
