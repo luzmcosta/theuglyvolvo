@@ -1,38 +1,62 @@
 (function() {
-    // Get elements and set
-    var header = $( "header" ),
-        searchForm = header.find( ".widget_search" ),
-        searchIcon = header.find( "div.search" ),
-        animation = {
-            in: "fadeInDown",
-            out: "fadeOutDown"
-        };
+    /**
+     * The Menu object oversees menus.
+     */
+    var Menu = {
+        el: $( "header" ),
+        initialize: function() {
+            this.render();
+        },
+        animation: {
+            in: "bounceDown",
+            out: "bounceUp"
+        }
+    };
 
-    // On click of the search icon or label...
-    searchIcon.off().click(function( event ) {
-        // Prevent default event.
-        event.preventDefault();
+    /**
+     * Set the menu view on the DOM.
+     */
+    Menu.render = function() {
+        var $this = this,
+            target = $this.el.find( ".menu-icon" ),
+            menu = [];
 
-        // Set default values.
-        var effect = animation.in,
-            current = animation.out;
+        // Set toggle event on click of menu icon.
+        target.click(function() {
+            // Get menu from DOM.
+            menu = $this.el.find( ".social-navbar" );
+
+            // Toggle the menu in or out of the view.
+            $this.toggle( menu );
+        });
+    };
+
+    /**
+     * Toggle the menu in and out of view.
+     */
+    Menu.toggle = function( el ) {
+        var current = this.animation.out,
+            effect = this.animation.in;
 
         // If el is visible, set fade effects accordingly.
-        if ( searchForm.is( ":visible" ) ) {
+        if ( $( el ).is( ":visible" ) ) {
             // Set effect that will be set on element.
-            effect = animation.out;
+            effect = this.animation.out;
             // Set effect that will be removed from element.
-            current = animation.in;
+            current = this.animation.in;
         }
 
         // Set on el the animated class if not already set.
-        if ( !searchForm.is( ".animated" ) ) {
-            searchForm.addClass( "animated" );
+        if ( !el.is( ".animated" ) ) {
+            el.addClass( "animated" );
         }
 
         // Remove current effect from el, and set new effect before toggling in/out.
-        searchForm.removeClass( current ).addClass( effect ).fadeToggle();
-    });
+        el.removeClass( current ).addClass( effect ).fadeToggle();
+    };
+
+    // Set the menu view.
+    Menu.initialize();
 
     /**
      * Set lightbox effect on images.
