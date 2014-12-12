@@ -4,7 +4,7 @@
  * The Ugly Volvo WordPress theme's custom CSS.
  *
  * @author Luz M. Costa
- * @updated 12.11.2014
+ * @updated 12.09.2014
  * @version 0.1
  *
  * Notes:
@@ -72,7 +72,7 @@ body {
 }
 
 p {
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-weight: 300;
     margin: 3rem auto;
     max-width: 80ch;
