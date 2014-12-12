@@ -234,8 +234,9 @@ dl {
 .social-navbar {
     background: rgba(255, 255, 255, 0.95);
     display: none;
-    height: 397px;
+    min-height: 397px;
     position: absolute;
+    text-align: center;
     width: 100%;
 }
 .header-navbar {
@@ -290,15 +291,25 @@ dl {
     position: absolute;
     right: 30px;
 }
-.social h2 {
-    margin: 1rem 2rem;
+.social-navbar h2 {
+    margin: 1rem 2rem 0 1rem;
 }
-.social .textwidget > div {
-    display: block;
+.social-navbar .textwidget > div {
+    display: inline-block;
+    font-size: 1.5rem;
     margin: 1rem;
 }
-.social .widget {
-    float: left;
+.social-navbar a {
+    color: rgb(41, 36, 32);
+    display: block;
+    font-size: 1.5rem;
+    padding-right: 4rem;
+}
+.social-navbar a:hover {
+    color: rgb(236, 37, 18);
+}
+.social-navbar a:not(:last-child) {
+    border-right: 1px solid gray;
 }
 .social img {
     margin-right: 1rem;
@@ -321,7 +332,7 @@ dl {
     width: 100%
 }
 .search {
-    margin: 1rem 4rem;
+    margin: 1rem 5rem 5rem 5rem;
     min-width: 280px;
 }
 .search button {
@@ -332,16 +343,15 @@ dl {
 }
 .like,
 .retweet {
+    display: inline-block;
+}
+.like:hover,
+.retweet:hover {
     color: rgb(236, 37, 18);
 }
 .like img,
 .retweet img {
     margin-right: 1rem;
-}
-.share {
-    float: right;
-    position: relative;
-    right: 120px;
 }
 
 .header-brand div {
@@ -351,7 +361,7 @@ dl {
     height: 500px;
 }
 .floor {
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid rgb(0, 0, 0);
     border-radius: 3px;
     height: 400px;
     position: absolute;
@@ -682,7 +692,7 @@ footer section h3 {
     font-weight: 600;
 }
 footer .jetpack_subscription_widget {
-    background: black;
+    background: rgb(0, 0, 0);
     color: white;
     float: none;
     margin: 2em 0;
