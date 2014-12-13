@@ -8,7 +8,7 @@
   <meta property="og:url" content="<?php echo the_permalink(); ?>" />
   <meta property="og:title" content="<?php echo wp_title('|', true, 'right'); ?>" />
   <meta property="og:description" content="Attempts at Adulthood" />
-  <!-- <meta property="og:image" content="" /> -->
+  <meta property="og:image" content="<?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@1x.png; ?>" />
 
   <?php wp_head(); ?>
 
