@@ -496,6 +496,9 @@ header {
 .page h2.entry-title {
     margin: 1em 0;
 }
+.single .entry-content h1 {
+    margin: 2rem 4rem 0 4rem;
+}
 .page .entry-content h2 {
     margin: 2rem 1rem;
 }
