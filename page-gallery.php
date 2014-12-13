@@ -19,6 +19,10 @@
                 $li_open = '<li>';
                 $li_close = '</li>';
 
+                // Set list items' open and closing tags.
+                $div_open = '<div>';
+                $div_close = '</div>';
+
                 // Reference each image in an array.
                 $fences = array(
                     "Henry Burroughs" => "fence_Henry_Burroughs.jpg",
@@ -45,6 +49,9 @@
                     // Open the list item element.
                     echo $li_open;
 
+                    // Close the div.
+                    echo $div_open;
+
                     // Open the image element.
                     echo $img_open;
 
@@ -58,7 +65,10 @@
                     echo $img_close;
 
                     // Set the image caption.
-                    echo '<figcaption>' . $name . '</figcaption>';
+                    echo '<figcaption>Photo Credit: ' . $name . '</figcaption>';
+
+                    // Close the div.
+                    echo $div_close;
 
                     // Close the list item element.
                     echo $li_close;

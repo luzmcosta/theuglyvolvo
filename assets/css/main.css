@@ -4,7 +4,7 @@
  * The Ugly Volvo WordPress theme's custom CSS.
  *
  * @author Luz M. Costa
- * @updated 12.12.2014
+ * @updated 12.13.2014
  * @version 0.1
  *
  * Notes:
@@ -133,12 +133,16 @@ p {
 figure {
     margin: 0 auto;
 }
-figcaption {
+figcaption:not(.gallery figcaption) {
     color: rgb(147, 147, 152);
     font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
     font-weight: 600;
     margin: 0 3em;
     text-align: center;
+}
+.gallery figcaption {
+    font-size: small;
+    text-align: right;
 }
 .size-full + figcaption {
     margin: 0.25em 0;
@@ -538,6 +542,10 @@ header {
 .gallery li {
     list-style-type: none;
     margin: 4rem auto;
+}
+.gallery li div {
+    margin: auto;
+    max-width: 640px;
 }
 
 .alert-warning {
