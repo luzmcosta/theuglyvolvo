@@ -276,7 +276,7 @@ dl {
     cursor: pointer;
 }
 .share-post h3 {
-    margin-right: 3rem;
+    margin: 6rem 3rem 2rem 0;
 }
 .share-post .or {
     background: white;
