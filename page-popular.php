@@ -8,12 +8,12 @@
     <?php
 
     // Set the parameters of the desired posts.
-    get_posts(array('posts_per_page' => -1, 'category_name' => 'most-popular'));
+    $args = array('posts_per_page' => -1, 'category_name' => 'most-popular');
 
     // Get posts matching the given parameters.
-    $myposts = get_posts( $args );
+    $posts = get_posts( $args );
 
-    foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+    foreach ( $posts as $post ) : setup_postdata( $post ); ?>
         <article class="entry-content most-popular-posts">
             <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
