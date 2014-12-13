@@ -662,7 +662,8 @@ li.comment.bypostauthor > .comment-meta .media-heading {
     color: red;
 }
 .media-body {
-    margin: 0 3rem;
+    clear: both;
+    margin: 0;
 }
 .comment-meta {
     display: inline-block;
@@ -694,7 +695,7 @@ li.comment.bypostauthor > .comment-meta .media-heading {
     font-size: 2rem;
     font-weight: 600;
     margin: 1em 0;
-    max-width: 14rem;
+    width: 14rem;
 }
 .comment-actions a:nth-child(2) {
     border-left: 1px solid #F5F5F5;
@@ -958,7 +959,12 @@ input[type="text"]:focus {
         margin: 12px 18px;
     }
 }
-
+@media (min-width: 600px) {
+    .media-body {
+        clear: none;
+        margin: 0 3rem;
+    }
+}
 
 /* Print */
 @media print {}
