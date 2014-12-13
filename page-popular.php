@@ -9,7 +9,7 @@
 
     // Set the parameters of the desired posts.
     $args = array('posts_per_page' => -1, 'category_name' => 'most-popular',
-        'meta_value' => 'order' );
+        'order_by' => 'meta_value', 'meta_key' => 'order' );
 
     // Get posts matching the given parameters.
     $posts = get_posts( $args );
