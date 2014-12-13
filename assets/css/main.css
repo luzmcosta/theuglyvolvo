@@ -136,8 +136,8 @@ figure {
 figcaption {
     color: rgb(147, 147, 152);
     font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
-    font-size: 1em;
-    margin: 1em 3em;
+    font-weight: 600;
+    margin: 0 3em;
     text-align: center;
 }
 .size-full + figcaption {
