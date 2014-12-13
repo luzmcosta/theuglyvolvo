@@ -272,7 +272,8 @@ dl {
     z-index: 1;
 }
 .share-post span:first-child {
-    background: rgb(187, 187, 187);
+    background: rgb(59, 89, 152);
+    cursor: pointer;
 }
 .share-post span:nth-child(2) {
     background: white;
@@ -288,10 +289,21 @@ dl {
     z-index: 2;
 }
 .share-post span:nth-child(3) {
-    background: rgb(155, 155, 155);
+    background: rgb(20, 160, 233);
+    cursor: pointer;
     left: -4rem;
     position: relative;
     z-index: 1;
+}
+.share-post span:first-child:hover,
+.share-post span:nth-child(3):hover {
+    color: white;
+}
+.share-post span:first-child:hover {
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.15);
+}
+.share-post span:nth-child(3):hover {
+    box-shadow: -3px 3px rgba(0, 0, 0, 0.15);
 }
 .menu-icon {
     float: right;
