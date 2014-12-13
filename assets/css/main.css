@@ -35,6 +35,11 @@
         -    Warn: #FF8000
         -    Success: #007700
 
+        Social Colors
+        -    Facebook Blue: #3B5998 | rgb(59, 89, 152)
+        -    Twitter Blue: #14A0E9 | rgb(20, 160, 233)
+        -    Pinterest Red: #CC2127 | rgb(204, 33, 39)
+
     * Font
         -    We're using "Trebuchet MS", Helvetica, sans-serif
             because Trebuchet's narrow letters suit our tables
@@ -765,9 +770,14 @@ footer .widget_text a {
 footer .widget_text a:hover {
     color: rgb(236, 37, 18);
 }
+.like_page {
+    color: rgb(59, 89, 152);
+}
+.tweet_page {
+    color: rgb(20, 160, 233);
+}
 .like_page,
 .tweet_page {
-    color: rgb(236, 37, 18);
     margin: 1rem;
 }
 .like_page:hover,
