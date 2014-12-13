@@ -8,7 +8,7 @@
     <?php
 
     // Set the parameters of the desired posts.
-    get_posts(array('category_name' => 'most-popular'));
+    get_posts(array('posts_per_page' => -1, 'category_name' => 'most-popular'));
 
     // Get posts matching the given parameters.
     $myposts = get_posts( $args );
