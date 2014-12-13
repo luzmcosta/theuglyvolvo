@@ -5,14 +5,19 @@
 <div id="primary" class="site-content">
     <div id="content" role="main">
 
-    <?php query_posts('cat=402'); ?>
+    <?php
 
-    <?php while ( have_posts() ) : the_post(); ?>
+    // Set the parameters of the desired posts.
+    get_posts(array('posts_per_page' => 5, 'category_name' => 'most-popular'));
 
-    <article class="entry-content most-popular-posts">
-        <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+    // Get posts matching the given parameters.
+    $myposts = get_posts( $args );
 
-        <?php if ( get_the_post_thumbnail($post_id) != '' ) {
+    foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+        <article class="entry-content most-popular-posts">
+            <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+
+            <?php if ( get_the_post_thumbnail($post_id) != '' ) {
                 echo '<a href="'; the_permalink(); echo '" class="thumbnail-wrapper">';
                 the_post_thumbnail( array(275, 250) );
                 echo '</a>';
@@ -21,10 +26,14 @@
                 echo '<img src="' . get_first_image() . '" alt="" />';
                 echo '</a>';
             }
-        ?>
-    </article><!-- .entry-content -->
+            ?>
+        </article><!-- .entry-content -->
+    <?php endforeach;
 
-    <?php endwhile; // end of the loop. ?>
+    // Reset.
+    wp_reset_postdata();
+
+    ?>
 
     </div><!-- #content -->
 </div><!-- #primary -->
