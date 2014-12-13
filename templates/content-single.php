@@ -9,9 +9,10 @@
     </div>
 
     <div class="share-post">
-        <span class="like_page">Share</span>
-        <span>or</span>
-        <span class="tweet_page">Tweet</span>
+        <h3>Share</h3>
+        <span class="like_page">Facebook</span>
+        <span class="or">or</span>
+        <span class="tweet_page">Twitter</span>
     </div>
 
     <footer>

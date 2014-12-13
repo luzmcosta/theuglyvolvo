@@ -26,5 +26,7 @@
 
         <?php endwhile; // end of the loop. ?>
 
+        <?php wp_link_pages(array('before' => '<nav class="pagination">', 'after' => '</nav>')); ?>
+
 	</div><!-- #content -->
 </div><!-- #primary -->

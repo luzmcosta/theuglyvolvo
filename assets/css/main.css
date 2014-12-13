@@ -268,14 +268,17 @@ dl {
     display: inline-block;
     padding: 1rem;
     text-align: center;
-    width: 12rem;
+    width: 14rem;
     z-index: 1;
 }
-.share-post span:first-child {
+.share-post .like_page {
     background: rgb(59, 89, 152);
     cursor: pointer;
 }
-.share-post span:nth-child(2) {
+.share-post h3 {
+    margin-right: 3rem;
+}
+.share-post .or {
     background: white;
     border-radius: 2rem;
     color: rgb(75, 75, 75);
@@ -288,21 +291,21 @@ dl {
     width: 4rem;
     z-index: 2;
 }
-.share-post span:nth-child(3) {
+.share-post .tweet_page {
     background: rgb(20, 160, 233);
     cursor: pointer;
     left: -4rem;
     position: relative;
     z-index: 1;
 }
-.share-post span:first-child:hover,
-.share-post span:nth-child(3):hover {
+.share-post .like_page:hover,
+.share-post .tweet_page:hover {
     color: white;
 }
-.share-post span:first-child:hover {
+.share-post .like_page:hover {
     box-shadow: 3px 3px rgba(0, 0, 0, 0.15);
 }
-.share-post span:nth-child(3):hover {
+.share-post .tweet_page:hover {
     box-shadow: -3px 3px rgba(0, 0, 0, 0.15);
 }
 .menu-icon {
@@ -785,12 +788,14 @@ footer .widget_text a:hover {
 .like_page {
     color: rgb(59, 89, 152);
 }
+.pin_page {
+    color: rgb(204, 33, 39);
+}
 .tweet_page {
     color: rgb(20, 160, 233);
 }
-.like_page,
-.tweet_page {
-    margin: 1rem;
+.share-page > * {
+    margin: 2rem 1rem;
 }
 .like_page:hover,
 .tweet_page:hover {
