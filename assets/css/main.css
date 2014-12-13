@@ -4,7 +4,7 @@
  * The Ugly Volvo WordPress theme's custom CSS.
  *
  * @author Luz M. Costa
- * @updated 12.09.2014
+ * @updated 12.12.2014
  * @version 0.1
  *
  * Notes:
@@ -234,7 +234,7 @@ dl {
 .social-navbar {
     background: rgba(255, 255, 255, 0.95);
     display: none;
-    min-height: 397px;
+    height: 100%;
     position: absolute;
     text-align: center;
     width: 100%;
@@ -248,8 +248,7 @@ dl {
 
 .social,
 .share {
-    /*display: none;*/
-    margin: 2rem;
+    margin: 8rem 2rem;
 }
 .share-post {
     text-align: center;
@@ -292,6 +291,7 @@ dl {
     right: 30px;
 }
 .social-navbar h2 {
+    color: rgb(236, 37, 18);
     margin: 1rem 2rem 0 1rem;
 }
 .social-navbar .textwidget > div {
@@ -343,6 +343,7 @@ dl {
 }
 .like,
 .retweet {
+    cursor: pointer;
     display: inline-block;
 }
 .like:hover,
