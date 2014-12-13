@@ -5,7 +5,7 @@
 <div id="primary" class="site-content">
     <div id="content" role="main">
 
-    <?php query_posts('cat=409'); ?>
+    <?php query_posts('cat=402'); ?>
 
     <?php while ( have_posts() ) : the_post(); ?>
 
