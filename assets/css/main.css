@@ -490,6 +490,9 @@ h2 a:hover {
 .nivo-lightbox-close {
     color: rgb(255,255,255);
 }
+#prodcontain {
+    text-align: center;
+}
 
 /* Title and Content */
 main {
