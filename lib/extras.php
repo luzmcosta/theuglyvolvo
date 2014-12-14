@@ -77,6 +77,23 @@ function get_first_image() {
 }
 
 /**
+ * Returns the featured image or the first image in the post.
+ */
+function get_main_image($post_id) {
+    if ( has_post_thumbnail($post_id) ) {
+        echo '<a href="'; the_permalink();
+        echo '" class="thumbnail-wrapper">';
+        the_post_thumbnail( array(275, 250) );
+        echo '</a>';
+    } else {
+        echo '<a href="'; the_permalink();
+        echo '" class="thumbnail-wrapper">';
+        echo '<img src="' . get_first_image() . '" alt="" />';
+        echo '</a>';
+    }
+}
+
+/**
  * Print menu items' descriptions with menu items' labels.
  */
 class Menu_With_Description extends Walker_Nav_Menu {

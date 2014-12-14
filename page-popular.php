@@ -19,18 +19,8 @@
                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h2>
 
-            <?php if ( get_the_post_thumbnail($post_id) != '' ) {
-                echo '<a href="'; the_permalink();
-                echo '" class="thumbnail-wrapper">';
-                the_post_thumbnail( array(275, 250) );
-                echo '</a>';
-            } else {
-                echo '<a href="'; the_permalink();
-                echo '" class="thumbnail-wrapper">';
-                echo '<img src="' . get_first_image() . '" alt="" />';
-                echo '</a>';
-            }
-            ?>
+            <!-- Get featured image or first image on page. -->
+            <?php get_main_image(the_ID()) ?>
         </article><!-- .entry-content -->
     <?php endforeach;
 
