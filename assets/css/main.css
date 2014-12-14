@@ -384,6 +384,7 @@ dl {
 }
 .header-brand img {
     max-height: 500px;
+    max-width: 100%;
 }
 .floor {
     border-bottom: 3px solid rgb(0, 0, 0);
