@@ -783,6 +783,7 @@ footer .widget_twitter_timeline h3 {
     border-image: url('../img/theuglyvolvo_border-bottom.png') 0 0 3 stretch;
     font-size: 2rem;
     line-height: 3;
+    margin-top: 0;
     padding-left: 60px;
 }
 footer .widget_text a {
