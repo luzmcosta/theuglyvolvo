@@ -27,6 +27,9 @@
                 <picture>
                     <img src="<?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@2x.png"
                         alt="<?php echo( get_bloginfo( 'title' ) ); ?>"
+                        srcset="<?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@1x.png 320w,
+                                <?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@1.5x.png 600w,
+                                <?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@2x.png 960w"
                     />
                 <picture>
             </a>
