@@ -77,6 +77,17 @@ function get_first_image() {
 }
 
 /**
+ * Returns the URL to the featured image or the first image in the post.
+ */
+function get_image_url($post_id) {
+    if ( has_post_thumbnail($post_id) ) {
+        return wp_get_attachment_image_src(get_post_thumbnail_id($post_id));
+    } else {
+        return get_first_image();
+    }
+}
+
+/**
  * Returns the featured image or the first image in the post.
  */
 function get_main_image($post_id) {
