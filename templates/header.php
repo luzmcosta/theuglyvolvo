@@ -25,11 +25,16 @@
         <div>
             <a href="<?php echo esc_url(home_url('/')); ?>">
                 <picture>
+                    <source media="(min-width: 600px)"
+                        srcset="<?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@2x.png 1x,
+                        <?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@1.5x.png 1.5x,
+                        <?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@1.5x.png 2x"
+                    >
                     <img src="<?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@2x.png"
                         alt="<?php echo( get_bloginfo( 'title' ) ); ?>"
-                        srcset="<?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@1x.png 320w,
-                                <?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@1.5x.png 600w,
-                                <?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@2x.png 960w"
+                        srcset="<?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@2x.png 1x,
+                                <?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@1.5x.png 1.5x,
+                                <?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@2x.png 2x"
                     />
                 <picture>
             </a>

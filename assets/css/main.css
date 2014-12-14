@@ -383,7 +383,7 @@ dl {
     text-align: center;
 }
 .header-brand img {
-    height: 500px;
+    max-height: 500px;
 }
 .floor {
     border-bottom: 3px solid rgb(0, 0, 0);
