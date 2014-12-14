@@ -388,7 +388,7 @@ dl {
 .floor {
     border-bottom: 3px solid rgb(0, 0, 0);
     border-radius: 3px;
-    height: 400px;
+    height: 20rem;
     position: absolute;
     top: 0;
     width: 100%;
@@ -975,6 +975,14 @@ input[type="text"]:focus {
     }
     .comment-meta {
         width: 14rem;
+    }
+    .floor {
+        height: 36rem;
+    }
+}
+@media (min-width: 960px) {
+    .floor {
+        height: 42rem;
     }
 }
 
