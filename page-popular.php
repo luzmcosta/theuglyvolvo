@@ -20,7 +20,7 @@
             </h2>
 
             <!-- Get featured image or first image on page. -->
-            <?php get_main_image(the_ID()) ?>
+            <?php get_main_image() ?>
         </article><!-- .entry-content -->
     <?php endforeach;
 
