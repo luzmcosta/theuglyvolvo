@@ -25,6 +25,11 @@
         <div>
             <a href="<?php echo esc_url(home_url('/')); ?>">
                 <picture>
+                    <source media="(min-resolution: 2dppx)"
+                        srcset="<?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@1x.png 300w,
+                                <?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@1.5x.png 600w,
+                                <?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@2x.png 960w"
+                    >
                     <source media="(min-width: 960px)"
                         srcset="<?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@2x.png 1x,
                                 <?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@2x.png 1.5x,
