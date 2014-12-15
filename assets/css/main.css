@@ -76,14 +76,17 @@ body {
     color: rgb(245, 245, 245);
 }
 img {
+    height: auto;
     max-width: 100%;
+}
+p:not(.contact-submit) {
+    max-width: 80ch;
 }
 p,
 .form-group {
     font-size: 2.25rem;
     font-weight: 300;
-    margin: 3rem auto;
-    max-width: 80ch;
+    margin: 3rem 2rem;
 }
 h1,
 h2,
@@ -241,16 +244,20 @@ dl {
 }
 .row {
     margin: 0;
-    padding: 0 4rem;
 }
 .social-navbar {
     background: rgba(255, 255, 255, 0.95);
+    border-bottom: 3px solid #000;
     display: none;
     position: absolute;
     width: 100%;
 }
 .header-navbar {
     padding: 1rem 0;
+}
+nav.collapse {
+    border: none;
+    display: block;
 }
 .contact {
     margin: 2em 0 3em 0;
@@ -295,10 +302,11 @@ dl {
     border-radius: 2rem;
     color: rgb(75, 75, 75);
     height: 4rem;
-    left: -2rem;
+    left: -50%;
     line-height: 2rem;
     padding: 0.75rem 0.75rem;
     position: relative;
+    top: 2rem;
     vertical-align: middle;
     width: 4rem;
     z-index: 2;
@@ -306,7 +314,7 @@ dl {
 .share-post .tweet_page {
     background: rgb(20, 160, 233);
     cursor: pointer;
-    left: -4rem;
+    left: -2rem;
     position: relative;
     z-index: 1;
 }
@@ -608,6 +616,9 @@ header {
     margin: 1em;
     text-align: center;
 }
+.contact form {
+    margin: 3rem;
+}
 
 p.MsoNormal {
     text-align: center;
@@ -763,7 +774,7 @@ footer .container {
 footer section {
     flex-basis: 1;
     flex-grow: 1;
-    margin: 24px auto;
+    margin: 2rem;
     min-width: 250px;
     max-width: 400px;
 }
@@ -788,10 +799,16 @@ footer .jetpack_subscription_widget p {
     margin: 0;
 }
 footer input[type=submit] {
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
     height: 4rem;
     margin-top: 1rem;
-    padding: 0 9ch;
+}
+footer input[type=submit]:hover {
+    background: none;
+    color: rgb(255, 255, 255);
+    border: 3px solid rgb(236, 37, 18);
 }
 footer #subscribe-text {
     font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
@@ -842,7 +859,7 @@ footer .widget_text a:hover {
 .tweet_page {
     color: rgb(20, 160, 233);
 }
-.share-page > * {
+.share-page > *:not(.share-count) {
     margin: 2rem 1rem;
 }
 .like_page:hover,
@@ -931,10 +948,7 @@ input[type="submit"] {
 .btn-primary:hover,
 .btn-default:hover,
 button:hover,
-input[type="submit"]:hover {
-    background: rgb(236, 37, 18);
-    box-shadow: 0 3px rgba(0, 0, 0, 0.15);
-}
+input[type="submit"]:hover,
 .btn-primary:focus,
 .btn-primary:active,
 .btn-default:focus,
@@ -943,20 +957,22 @@ button:focus,
 button:active,
 input[type="submit"]:focus ,
 input[type="submit"]:active {
-    background: rgb(236, 37, 18);
-    border: none;
-    color: white;
+    background: rgb(255, 255, 255);
+    color: rgb(236, 37, 18);
+    border: 3px solid rgb(236, 37, 18);
 }
 label,
 input {
+    font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
     outline: none;
 }
 textarea,
 input[type="email"],
 input[type="text"] {
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 0.25rem;
     margin: 1rem 0;
+    outline: none;
     padding: 6px 12px;
     width: 100% !important;
 }
@@ -967,7 +983,7 @@ input[type="text"]:focus {
 }
 
 .contact-form {
-    margin-bottom: 3em;
+    margin-bottom: 5rem;
 }
 .contact-form label {
     font-weight: 400 !important;
@@ -979,8 +995,8 @@ input[type="text"]:focus {
     font-weight: 300 !important;
 }
 .contact-form input[type="submit"] {
-    height: 42px;
-    line-height: 2;
+    font-size: 2rem;
+    height: 5rem;
 }
 .contact-form input[type="email"] {
     max-width: 100%;
@@ -1008,6 +1024,18 @@ input[type="text"]:focus {
         top: 1em;
     }
 }
+@media (min-width: 400px) {
+    .share-post .or {
+        left: -2rem;
+        top: 0;
+    }
+    .share-post .tweet_page {
+        left: -4rem;
+    }
+    footer section {
+        margin: 24px auto;
+    }
+}
 @media (min-width: 600px) {
     li.comment li {
         padding: 3rem;
@@ -1021,6 +1049,17 @@ input[type="text"]:focus {
     }
     .floor {
         height: 36rem;
+    }
+    .row {
+        margin: 0;
+        padding: 0 4rem;
+    }
+    p,
+    .form-group {
+        margin: 3rem auto;
+    }
+    .contact form {
+        margin: 3rem 5rem;
     }
 }
 @media (min-width: 675px) {
