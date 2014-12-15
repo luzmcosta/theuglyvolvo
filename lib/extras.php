@@ -140,7 +140,89 @@ class Menu_With_Description extends Walker_Nav_Menu {
 /**
  * Displays the Facebook follower count.
  */
-function facebook_count( $username ) {
-    $facebook_count = file_get_contents( 'http://graph.facebook.com/' . $username );
-    return json_decode( $facebook_count )->likes;
+function get_facebook_user() {
+    $username = 'theuglyvolvo';
+    $user = file_get_contents( 'http://graph.facebook.com/' . $username );
+    return json_decode( $user );
+}
+
+/**
+ * Displays the Facebook follower count.
+ */
+function facebook_page_count( $username ) {
+    return intval( get_facebook_user()->likes );
+}
+
+/**
+ * Displays the Facebook like + share counts.
+ */
+function facebook_url_count( $url ) {
+    $facebook_count = file_get_contents( 'http://graph.facebook.com/' . $url . '/likes' );
+
+    $count = json_decode( $facebook_count );
+
+    return intval( $count->shares );
+}
+
+/**
+ * Requests user information from the Twitter API.
+ */
+function get_twitter_user() {
+    $resource = "https://api.twitter.com/1.1/users/show.json/";
+    $user_id = "screen_name=theuglyvolvo";
+
+    // Request the user information.
+    $user = file_get_contents( $resource . $user_id );
+
+    // Return user information in JSON format.
+    return json_decode( $user );
+}
+
+/**
+ * Displays the Twitter follower count.
+ */
+function twitter_follower_count() {
+    // Get user information.
+    $user = get_twitter_user();
+
+    // Return user's follower count.
+    return intval( $user->followers_count );
+}
+
+/**
+ * Displays the Twitter tweet count.
+ */
+function twitter_url_count( $url ) {
+    $resource = 'http://urls.api.twitter.com/1/urls/count.json?url=';
+    // Request the user information.
+    $count = file_get_contents( $resource . $url );
+
+    // Return user information in JSON format.
+    return json_decode( $count )->count;
+}
+
+/**
+ * Returns Pinterest count.
+ */
+function pinterest_count( $url ) {
+    $resource = 'http://api.pinterest.com/v1/urls/count.json?callback=receiveCount&url=';
+
+    $pinterest = file_get_contents( $resource . $url );
+
+    $response = preg_replace( '/.+?({.+}).+/','$1', $pinterest );
+
+    return intval( json_decode( $response )->count );
+}
+
+/**
+ * Get a total share count for a page.
+ */
+function share_count($url) {
+    $facebook_count = facebook_url_count($url);
+    $twitter_count = twitter_url_count($url);
+    $pinterest_count = pinterest_count($url);
+
+    $total = $facebook_count + $twitter_count + $pinterest_count;
+
+    return intval( $total );
 }

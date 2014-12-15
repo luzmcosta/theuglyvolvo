@@ -4,7 +4,7 @@
  * The Ugly Volvo WordPress theme's custom CSS.
  *
  * @author Luz M. Costa
- * @updated 12.13.2014
+ * @updated 12.14.2014
  * @version 0.1
  *
  * Notes:
@@ -258,6 +258,17 @@ dl {
 .social,
 .share {
     margin: 8rem 2rem;
+}
+.share-count:not(span) {
+    font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0 1rem;
+}
+.share-count span {
+    clear: both;
+    display: block;
+    font-size: small;
 }
 .share-post {
     text-align: center;
