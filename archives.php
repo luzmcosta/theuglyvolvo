@@ -13,7 +13,7 @@
             <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
             <!-- Get featured image or first image on page. -->
-            <?php get_main_image(); ?>
+            <?php get_main_image(get_permalink()); ?>
         </article><!-- .entry-content -->
 
         <?php endwhile; // end of the loop. ?>
