@@ -251,6 +251,7 @@ dl {
     display: none;
     position: absolute;
     width: 100%;
+    z-index: 100;
 }
 .header-navbar {
     padding: 1rem 0;
