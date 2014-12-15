@@ -75,7 +75,9 @@ body {
     background: rgb(236, 37, 18); /* Gecko Browsers */
     color: rgb(245, 245, 245);
 }
-
+img {
+    max-width: 100%;
+}
 p {
     font-size: 2.25rem;
     font-weight: 300;
@@ -235,10 +237,6 @@ dl {
 }
 .container-fluid {
     padding: 0;
-}
-.row {
-    margin: 0;
-    padding: 0 4em;
 }
 .social-navbar {
     background: rgba(255, 255, 255, 0.95);
