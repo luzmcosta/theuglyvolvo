@@ -238,9 +238,13 @@ dl {
 .container-fluid {
     padding: 0;
 }
+.row {
+    margin: 0;
+    padding: 0 4rem;
+}
 .social-navbar {
     background: rgba(255, 255, 255, 0.95);
-/*    display: none; */
+    display: none;
     position: absolute;
     width: 100%;
 }
@@ -259,7 +263,7 @@ dl {
     font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
     font-size: 2rem;
     font-weight: 600;
-    margin: 0 1rem;
+    padding: 0 1rem;
 }
 .share-count span {
     clear: both;
@@ -603,6 +607,11 @@ header {
     margin: 1em;
     text-align: center;
 }
+
+p.MsoNormal {
+    text-align: center;
+}
+
 
 /* Links and Menus */
 nav.post-nav {
