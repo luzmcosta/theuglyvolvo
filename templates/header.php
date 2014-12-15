@@ -1,18 +1,18 @@
 <header class="banner navbar navbar-default navbar-static-top" role="banner">
   <div class="container-fluid">
 
-      <div class="social-navbar">
-          <div class="search">
-              <?php dynamic_sidebar('sidebar-search'); ?>
-          </div>
+    <div class="social-navbar">
+        <div class="social">
+            <?php dynamic_sidebar('sidebar-social'); ?>
+        </div>
 
-          <div class="social">
-        <?php dynamic_sidebar('sidebar-social'); ?>
-      </div>
+        <div class="share">
+            <?php dynamic_sidebar('sidebar-share'); ?>
+        </div>
 
-      <div class="share">
-        <?php dynamic_sidebar('sidebar-share'); ?>
-      </div>
+        <div class="search">
+            <?php dynamic_sidebar('sidebar-search'); ?>
+        </div>
     </div>
 
     <div class="menu-icon">
