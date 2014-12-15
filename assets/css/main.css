@@ -78,7 +78,8 @@ body {
 img {
     max-width: 100%;
 }
-p {
+p,
+.form-group {
     font-size: 2.25rem;
     font-weight: 300;
     margin: 3rem auto;
@@ -669,15 +670,26 @@ section#respond h3 {
     margin-bottom: 3rem;
     padding-bottom: 1rem;
 }
+.comment .form-control {
+    font-size: 100%;
+}
+.comment-subscription-form label {
+    font-weight: 300;
+    margin: 1rem;
+}
 .media-list > li {
     border-left: 3px solid red;
     margin-bottom: 3rem;
     padding-left: 2rem;
 }
-li.comment.depth-4 > .comment-meta {
+li.comment.depth-3 > .comment-meta,
+li.comment.depth-4 > .comment-meta,
+li.comment.depth-5 > .comment-meta {
     width: 100%;
 }
-li.comment.depth-4 > .media-body {
+li.comment.depth-3 > .media-body,
+li.comment.depth-4 > .media-body,
+li.comment.depth-5 > .media-body {
     clear: left;
 }
 li.comment p {
@@ -920,9 +932,8 @@ input[type="submit"] {
 .btn-default:hover,
 button:hover,
 input[type="submit"]:hover {
-    background: rgb(255, 255, 255);
-    border: 3px solid rgb(236, 37, 18);
-    color: rgb(236, 37, 18);
+    background: rgb(236, 37, 18);
+    box-shadow: 0 3px rgba(0, 0, 0, 0.15);
 }
 .btn-primary:focus,
 .btn-primary:active,
