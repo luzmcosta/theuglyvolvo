@@ -4,7 +4,7 @@
  * The Ugly Volvo WordPress theme's custom CSS.
  *
  * @author Luz M. Costa
- * @updated 12.14.2014
+ * @updated 12.15.2014
  * @version 0.1
  *
  * Notes:
@@ -334,6 +334,7 @@ nav.collapse {
     margin: 1rem 0;;
     position: absolute;
     right: 30px;
+    z-index: 100;
 }
 .social-navbar img {
     max-height: 32px;
