@@ -41,8 +41,8 @@
                     "m01229" => "fence_m01229.jpg",
                     "UFORA" => "fence_UFORA.jpg",
                     "Toby Oxborrow" => "fence_Toby_Oxborrow.jpg",
-                    "Damian Gadal" => "fence_Damian_Gadal.jpg",
-                    "See One, Do One, Teach One" => "fence_see1_do1_teach1.jpg"
+                    "See One, Do One, Teach One" => "fence_see1_do1_teach1.jpg",
+                    "Damian Gadal" => "fence_Damian_Gadal.jpg"
                 );
 
                 foreach($fences as $name => $fence) {
