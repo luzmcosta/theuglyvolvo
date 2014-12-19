@@ -29,7 +29,7 @@ function roots_scripts() {
       'js'        => '/assets/js/scripts.js',
       'masonry'   => '/assets/js/masonry.pkgd.min.js',
       'imgLoaded' => '/assets/js/imagesloaded.pkgd.min.js',
-      'modernizr' => '/assets/vendor/modernizr/modernizr.js',
+      'modernizr' => '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js',
       'nivojs'    => '/assets/js/nivo-lightbox.min.js',
       'nivocss'   => '/assets/css/nivo-lightbox.css',
       'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js'
@@ -67,7 +67,7 @@ function roots_scripts() {
     wp_enqueue_script('comment-reply');
   }
 
-  wp_enqueue_script('modernizr', get_template_directory_uri() . $assets['modernizr'], array(), null, false);
+  wp_enqueue_script('modernizr');
   wp_enqueue_script('jquery');
   /* Load Nivo Lightbox after jQuery */
   wp_enqueue_script('nivojs', get_template_directory_uri() . $assets['nivojs'], array(), null, true);
