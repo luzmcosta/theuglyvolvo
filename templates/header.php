@@ -29,24 +29,24 @@
                     srcset="<?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@2x.png 1x,
                     <?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@2x.png 1.5x,
                     <?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@2x.png 2x"
-                    >
+                    />
                     <source media="(min-width: 600px)"
                     srcset="<?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@1.5x.png 1x,
                     <?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@1.5x.png 1.5x,
                     <?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@1.5x.png 2x"
-                    >
+                    />
                     <source media="(min-width: 300px)"
                     srcset="<?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@1x.png 1x,
                     <?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@1x.png 1.5x,
                     <?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@1x.png 2x"
-                    >
+                    />
                     <img src="<?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@2x.png"
                     alt="<?php echo( get_bloginfo( 'title' ) ); ?>"
                     srcset="<?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@1x.png 300w,
                     <?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@1.5x.png 600w,
                     <?php echo get_bloginfo('template_directory') ?>/assets/img/theuglyvolvo_logo@2x.png 960w"
                     />
-                <picture>
+                </picture>
             </a>
         </div>
     </div>
