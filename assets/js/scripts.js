@@ -86,7 +86,7 @@
      */
     window.fbAsyncInit = function() {
         FB.init({
-            appId: "700636043345419",
+            appId: "667755756633448",
             cookie: true,
             status: true,
             xfbml: true,
@@ -112,22 +112,22 @@
         /**
          * Set Facebook like event on UI element that likes the page.
          */
-        $( ".like, .like_page" ).on( "click", this.facebook.share );
+        $( ".like, .like_page" ).off().on( "click", this.facebook.share );
 
         /**
          * Set Twitter tweet event on UI element.
          */
-        $( ".tweet_page" ).on( "click", this.twitter.page.bind( this ) );
+        $( ".tweet_page" ).off().on( "click", this.twitter.page.bind( this ) );
 
         /**
          * Set Twitter event on UI element that shares the site.
          */
-        $( ".retweet" ).on( "click", this.twitter.site.bind( this ) );
+        $( ".retweet" ).off().on( "click", this.twitter.site.bind( this ) );
 
         /**
          * Set Facebook like event on UI element.
          */
-        $( "#like_site" ).on( "click", this.like );
+        $( "#like_site" ).off().on( "click", this.like );
 
         /**
          * Render the Twitter widget's Follow button.
