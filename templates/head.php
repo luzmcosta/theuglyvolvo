@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title><?php wp_title('|', true, 'right'); ?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="description" content="A website for anyone with both a child and a sense of humor." />
   <meta property="og:url" content="<?php echo the_permalink(); ?>" />
   <meta property="og:title" content="<?php echo wp_title('|', true, 'right'); ?>" />
   <meta property="og:description" content="Attempts at Adulthood" />
