@@ -802,6 +802,7 @@ footer .jetpack_subscription_widget p {
     margin: 0;
 }
 footer input[type=submit] {
+    border: 3px solid rgb(236, 37, 18);
     border-radius: 0.5rem;
     color: rgb(255, 255, 255);
     font-size: 2rem;
@@ -828,6 +829,7 @@ footer #subscribe-field {
     border-bottom: 3px solid white;
     border-radius: 0.25rem;
     color: white;
+    font-size: 2rem;
     height: 4rem;
     padding: 0 1em;
     text-align: center;
