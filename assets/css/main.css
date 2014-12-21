@@ -4,7 +4,7 @@
  * The Ugly Volvo WordPress theme's custom CSS.
  *
  * @author Luz M. Costa
- * @updated 12.15.2014
+ * @updated 12.21.2014
  * @version 0.1
  *
  * Notes:
@@ -788,8 +788,9 @@ footer .jetpack_subscription_widget {
     color: white;
     float: none;
     margin: 2em 0;
-    padding: 1.5em 2em 2em 2em;
+    padding: 2em;
     max-width: 100%;
+    text-align: center;
     width: 100%;
 }
 footer .jetpack_subscription_widget h3 {
@@ -829,6 +830,7 @@ footer #subscribe-field {
     color: white;
     height: 4rem;
     padding: 0 1em;
+    text-align: center;
     width: 25ch;
 }
 footer .jetpack_subscription_widget i {
@@ -1012,6 +1014,11 @@ input[type="text"]:focus {
 }
 .contact-form span {
     font-size: 0.8em;
+}
+
+/* Removes WordPress smiley face. */
+#wpstats {
+    display: none;
 }
 
 /* Responsive */
