@@ -165,8 +165,15 @@ function get_facebook_user() {
 /**
  * Displays the Facebook follower count.
  */
-function facebook_page_count( $username ) {
-    return intval( get_facebook_user()->likes );
+function facebook_page_count() {
+    // Get the
+    $likes = get_facebook_user()->likes;
+
+    if ( !is_int( $likes ) ) {
+        return 0;
+    }
+
+    return $likes;
 }
 
 /**
@@ -174,10 +181,18 @@ function facebook_page_count( $username ) {
  */
 function facebook_url_count( $url ) {
     // Get JSON-decoded data.
-    $facebook_count = get_facebook( $url );
+    $request = get_facebook( $url );
+
+    // Get share count from returned data.
+    $facebook_count = $request->shares;
+
+    // Validate.
+    if ( !is_int( $facebook_count ) ) {
+        return 0;
+    }
 
     // Return the number of times this url has been shared on Facebook.
-    return intval( $facebook_count->shares );
+    return $facebook_count;
 }
 
 /**
@@ -202,43 +217,74 @@ function twitter_follower_count() {
     $user = get_twitter_user();
 
     // Return user's follower count.
-    return intval( $user->followers_count );
+    return $user->followers_count;
 }
 
 /**
  * Displays the Twitter tweet count.
  */
 function twitter_url_count( $url ) {
+    // Prepare the request.
     $resource = 'http://urls.api.twitter.com/1/urls/count.json?url=';
-    // Request the user information.
-    $count = file_get_contents( $resource . $url );
 
-    // Return user information in JSON format.
-    return json_decode( $count )->count;
+    // Request the user information.
+    $request = file_get_contents( $resource . $url );
+
+    // Convert JSON to PHP variable to get count.
+    $count = json_decode( $request )->count;
+
+    // Validate.
+    if ( !is_int( $count ) ) {
+        return 0;
+    }
+
+    // Return Twitter tweet count.
+    return $count;
 }
 
 /**
  * Returns Pinterest count.
  */
 function pinterest_count( $url ) {
+    // Prepare the request.
     $resource = 'http://api.pinterest.com/v1/urls/count.json?callback=receiveCount&url=';
 
+    // Request the Pinterest count from the Pinterest API.
     $pinterest = file_get_contents( $resource . $url );
 
+    // Prepare the returned data for decoding.
     $response = preg_replace( '/.+?({.+}).+/','$1', $pinterest );
 
-    return intval( json_decode( $response )->count );
+    // Convert JSON to PHP variable to get count.
+    $count = json_decode( $response )->count;
+
+    // Validate.
+    if ( !is_int( $count ) ) {
+        return 0;
+    }
+
+    return $count;
 }
 
 /**
  * Get a total share count for a page.
  */
-function share_count($url) {
-    $facebook_count = facebook_url_count(urlencode($url));
-    $twitter_count = twitter_url_count(urlencode($url));
-    $pinterest_count = pinterest_count(urlencode($url));
+function share_count() {
+    // Set page's URL.
+    $url = urlencode( 'http://theuglyvolvo.com' . $_SERVER['REQUEST_URI'] );
 
+    // Request the share counts from various sources.
+    $facebook_count = facebook_url_count($url);
+    $twitter_count = twitter_url_count($url);
+    $pinterest_count = pinterest_count($url);
+
+    // Add all sources.
     $total = $facebook_count + $twitter_count + $pinterest_count;
 
-    return intval( $total );
+    // Validate.
+    if ( !is_int( $total ) ) {
+        return 0;
+    }
+
+    return $total;
 }
