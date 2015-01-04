@@ -10,7 +10,7 @@
         <i class="fa fa-pinterest pin_page"></i>
     </a>
 
-    <a class="tweet_page" target="_blank" href="https://twitter.com/share?url=<?php the_permalink(); ?>&via=theuglyvolvo&related=luzmcosta&text=<?php the_title(); ?>">
+    <a class="tweet_page" target="_blank" href="https://twitter.com/share?url=<?php the_permalink(); ?>&via=theuglyvolvo&related=luzmcosta,charlesbivona&text=<?php the_title(); ?>">
         <i class="fa fa-twitter"></i>
     </a>
 
