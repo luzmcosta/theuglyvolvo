@@ -138,12 +138,28 @@ class Menu_With_Description extends Walker_Nav_Menu {
 }
 
 /**
+ * Requests resource from Facebook API.
+ */
+function get_facebook( $resource ) {
+    // Request resource from Facebook API.
+    $data = file_get_contents( 'http://graph.facebook.com/' . $resource );
+
+    // Return JSON-decoded data.
+    return json_decode($data);
+}
+
+/**
  * Displays the Facebook follower count.
  */
 function get_facebook_user() {
+    // Set username.
     $username = 'theuglyvolvo';
-    $user = file_get_contents( 'http://graph.facebook.com/' . $username );
-    return json_decode( $user );
+
+    // Get user data from Facebook API.
+    $user = get_facebook( $username );
+
+    // Return JSON-decoded user data.
+    return $user;
 }
 
 /**
@@ -157,11 +173,11 @@ function facebook_page_count( $username ) {
  * Displays the Facebook like + share counts.
  */
 function facebook_url_count( $url ) {
-    $facebook_count = file_get_contents( 'http://graph.facebook.com/' . $url . '/likes' );
+    // Get JSON-decoded data.
+    $facebook_count = get_facebook( $url );
 
-    $count = json_decode( $facebook_count );
-
-    return intval( $count->shares );
+    // Return the number of times this url has been shared on Facebook.
+    return intval( $facebook_count->shares );
 }
 
 /**
@@ -218,9 +234,9 @@ function pinterest_count( $url ) {
  * Get a total share count for a page.
  */
 function share_count($url) {
-    $facebook_count = facebook_url_count($url);
-    $twitter_count = twitter_url_count($url);
-    $pinterest_count = pinterest_count($url);
+    $facebook_count = facebook_url_count(urlencode($url));
+    $twitter_count = twitter_url_count(urlencode($url));
+    $pinterest_count = pinterest_count(urlencode($url));
 
     $total = $facebook_count + $twitter_count + $pinterest_count;
 
