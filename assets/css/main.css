@@ -4,7 +4,7 @@
  * The Ugly Volvo WordPress theme's custom CSS.
  *
  * @author Luz M. Costa
- * @updated 01.03.2014
+ * @updated 01.11.2014
  * @version 0.0.1
  *
  * Notes:
@@ -851,7 +851,6 @@ footer .widget_twitter_timeline h3 {
 footer .widget_text a {
     color: rgb(41, 36, 32);
     float: left;
-    font-size: 2em;
     font-weight: 300;
 }
 footer .widget_text a:hover {
@@ -885,6 +884,9 @@ footer .widget_facebook-like-box {
     border: 1px solid #e5e6e9;
     padding: 2rem 24px;
 }
+.theuglyvolvo_on_facebook {
+    padding-top: 1rem;
+}
 .theuglyvolvo_on_facebook img {
     border-radius: 4px;
     margin-right: 12px;
@@ -905,18 +907,25 @@ footer .widget_facebook-like-box {
     height: 3rem;
     width: 8rem;
     display: block;
-    margin: 1rem;
+    margin: 0.5rem 1rem;
 }
 li.feed-item {
     list-style: none;
     margin-bottom: 1rem;
     padding-bottom: 1rem;
 }
+li.feed-item:first-child {
+    margin-top: 2rem;
+}
 .rss-aggregator {
     border-image: url('../img/theuglyvolvo_border-bottom.png') 3 0 0 stretch;
     clear: both;
     margin: 2rem 0;
     padding: 0;
+}
+.rss-aggregator + .nav-links {
+    height: 0;
+    margin: 0;
 }
 span.feed-date {
     display: none;
