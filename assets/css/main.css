@@ -79,7 +79,7 @@ img {
     height: auto;
     max-width: 100%;
 }
-p:not(.contact-submit) {
+p:not(form p) {
     max-width: 80ch;
 }
 p,
@@ -680,17 +680,31 @@ p.MsoNormal {
     padding-right: 9px;
 }
 section#comments {
+    background: #F3F3F4;
     clear: both;
     margin: 6rem 0;
+    padding-bottom: 1rem;
+}
+section#comments nav {
+    margin: 1rem;
 }
 section#comments h3,
 section#respond h3 {
-    border-bottom: 1px solid red;
-    font-family: Lato, Century Gothic, sans-serif;
+    background: #EC2512;
+    color: #FFFFFF;
     font-weight: 600;
     font-size: 1em;
-    margin-bottom: 3rem;
-    padding-bottom: 1rem;
+    padding: 1rem;
+}
+.respond {
+    color: #FFFFFF;
+    display: block;
+    font-family: Lato, Century Gothic, sans-serif;
+    font-size: small;
+}
+.respond:hover {
+    color: #FFFFFF;
+    font-style: italic;
 }
 .comment .form-control {
     font-size: 100%;
@@ -700,9 +714,9 @@ section#respond h3 {
     margin: 1rem;
 }
 .media-list > li {
-    border-left: 3px solid red;
-    margin-bottom: 3rem;
-    padding-left: 2rem;
+    background: #FFF;
+    margin: 1rem;
+    padding: 3rem;
 }
 li.comment.depth-3 > .comment-meta,
 li.comment.depth-4 > .comment-meta,
@@ -768,7 +782,15 @@ li.comment.bypostauthor > .comment-meta .media-heading {
     padding-left: 0.5em;
 }
 section#respond {
+    background: #F3F3F4;
     margin: 3em 0;
+}
+section#respond .form-group,
+section#respond p {
+    margin: 3rem;
+}
+form#commentform {
+    padding-bottom: 1rem;
 }
 div#jp-relatedposts {
     clear: both;
@@ -987,7 +1009,8 @@ input[type="submit"]:active {
 }
 label,
 input {
-    font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
+    font-size: smaller;
+    font-weight: 300;
     outline: none;
 }
 textarea,
@@ -995,7 +1018,6 @@ input[type="email"],
 input[type="text"] {
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 0.25rem;
-    margin: 1rem 0;
     outline: none;
     padding: 6px 12px;
     width: 100% !important;
