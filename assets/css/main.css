@@ -242,8 +242,13 @@ dl {
     padding: 0;
 }
 .row {
-    background: #F3F3F4;
     margin: 0;
+}
+.home .row,
+.page-template-page-popular .row,
+.page-template-archives .row,
+.search-results .row {
+    background: #F3F3F4;
 }
 .social-navbar {
     background: rgba(255, 255, 255, 0.95);
