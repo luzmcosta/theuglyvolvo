@@ -546,7 +546,8 @@ header {
     width: 1%;
 }
 .home article,
-.page .entry-content:not(.contact) {
+.page .entry-content:not(.contact),
+nav {
     background: #FFFFFF;
     border-top: 1px solid rgba(0, 0, 0, 0.01);
     box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.05);
@@ -631,9 +632,11 @@ p.MsoNormal {
 
 
 /* Links and Menus */
-nav.post-nav {
-    margin: 0.25em 0.5em 1em 0.5em;
-    min-width: 17em;
+.pager {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 2rem 0;
 }
 .pager .previous > a,
 .pager .previous > span,
@@ -641,37 +644,35 @@ nav.post-nav {
 .pager .next > span {
     float: none;
 }
+.pager li {
+    display: inline-flex;
+}
 .pager li > a:hover,
 .pager li > a:focus {
     background-color: transparent;
+    color: rgb(236, 37, 18);
 }
 .pager li > a,
 .pager li > span {
+    background-position-y: 8px;
+    background-size: 14px;
     border: none;
+    border-radius: 4px;
     color: rgb(41, 36, 32);
     line-height: 1;
+    padding: 1rem;
 }
 .previous a {
     background: rgb(255, 255, 255) url('../img/theuglyvolvo_arrow-left.png') no-repeat left top;
-    background-size: 18px;
-}
-.previous a:focus,
-.previous a:hover {
-    margin-right: 3px;
 }
 .previous span {
-    padding-left: 15px;
+    padding-left: 9px;
 }
 .next a {
     background: rgb(255, 255, 255) url('../img/theuglyvolvo_arrow-right.png') no-repeat right top;
-    background-size: 18px;
-}
-.next a:focus,
-.next a:hover {
-    margin-left: 3px;
 }
 .next span {
-    padding-right: 15px;
+    padding-right: 9px;
 }
 section#comments {
     clear: both;
