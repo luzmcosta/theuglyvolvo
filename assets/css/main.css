@@ -744,8 +744,8 @@ li.comment p {
     margin: 0 auto 2rem 2rem;
 }
 li.comment li {
-    border-left: 3px solid rgb(236, 37, 18);
-    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
     margin: 2rem;
     padding: 1rem;
 }
