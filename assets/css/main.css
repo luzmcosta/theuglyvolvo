@@ -246,8 +246,8 @@ dl {
     margin: 0;
 }
 .home .row,
-.page-template-page-popular .row,
-.page-template-archives .row,
+.page-template-page-popular-php .row,
+.page-template-archives-php .row,
 .search-results .row {
     background: #F3F3F4;
 }
