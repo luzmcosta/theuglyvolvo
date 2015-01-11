@@ -202,7 +202,6 @@ dt {
     margin-bottom: 3px;
 }
 dd {
-    border-image: url('../img/theuglyvolvo_border-bottom.png') 0 6 3 stretch;
     font-weight: 300;
     margin-bottom: 1em;
     padding-bottom: 0.5em;
@@ -542,13 +541,14 @@ header {
     text-align: center;
 }
 
+.gutter {
+    width: 1%;
+}
 .home article,
 .page .entry-content:not(.contact) {
-    background: url('../img/theuglyvolvo_border-top.png') no-repeat center top;
-    border-image: url('../img/theuglyvolvo_border-bottom.png') 0 0 3 stretch;
-    display: inline-block;
-    margin: 0.25em 0.5em 1em 0.5em;
-    padding-bottom: 1em;
+    border-top: 1px solid rgba(0, 0, 0, 0.01);
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
     min-width: 17em;
     text-align: center;
 }
@@ -587,7 +587,7 @@ header {
     text-align: center;
 }
 .home .entry-summary {
-    margin: 1rem 0 0 4px;
+    margin: 1rem;
     text-align: center;
 }
 .gallery ul {
@@ -783,6 +783,7 @@ footer section {
 }
 footer section h3 {
     font-weight: 600;
+    margin: 0;
 }
 footer .jetpack_subscription_widget {
     background: rgb(0, 0, 0);
@@ -841,8 +842,7 @@ footer .jetpack_subscription_widget i {
 }
 footer .widget_twitter_timeline h3 {
     background: url(../img/theuglyvolvo_twitter.png) 0 0 no-repeat;
-    background-size: 57px;
-    border-image: url('../img/theuglyvolvo_border-bottom.png') 0 0 3 stretch;
+    background-size: 50px;
     font-size: 2rem;
     line-height: 3;
     margin-top: 0;
@@ -890,6 +890,7 @@ footer .widget_facebook-like-box {
 .theuglyvolvo_on_facebook img {
     border-radius: 4px;
     margin-right: 12px;
+    width: 42px;
 }
 .theuglyvolvo_on_facebook h3 {
     font-size: 2rem;
@@ -918,9 +919,8 @@ li.feed-item:first-child {
     margin-top: 2rem;
 }
 .rss-aggregator {
-    border-image: url('../img/theuglyvolvo_border-bottom.png') 3 0 0 stretch;
     clear: both;
-    margin: 2rem 0;
+    margin: 1.35rem 0;
     padding: 0;
 }
 .rss-aggregator + .nav-links {

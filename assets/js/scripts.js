@@ -76,7 +76,7 @@
             columnWidth: "article",
             isFitWidth: true,
             itemSelector: "article, nav",
-            gutter: 0,
+            gutter: ".gutter",
             transitionDuration: "0.5s"
         });
     });
