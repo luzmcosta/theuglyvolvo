@@ -412,6 +412,10 @@ nav.collapse {
 .search label {
     display: none;
 }
+.search-field:focus {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 3px -1px rgba(0, 0, 0, 0.15);
+}
 .like,
 .retweet {
     cursor: pointer;
@@ -994,6 +998,7 @@ input[type="submit"] {
     font-weight: 600 !important;
     height: 4em;
     text-align: center;
+    transition: background-color 0.15s linear;
     padding: 0 1em;
     width: 100%;
 }
