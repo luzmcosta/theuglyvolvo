@@ -4,8 +4,8 @@
  * The Ugly Volvo WordPress theme's custom CSS.
  *
  * @author Luz M. Costa
- * @updated 01.11.2014
- * @version 0.0.1
+ * @updated 01.29.2014
+ * @version 0.0.2
  *
  * Notes:
     * Developer Notes
@@ -564,11 +564,13 @@ header {
     width: 1%;
 }
 .home article,
+.page-template article {
+    background: #FFFFFF url('../img/theuglyvolvo_border-top.png') no-repeat center top;
+	border-image: url('../img/theuglyvolvo_border-bottom.png') 0 0 3 stretch;
+}
+.home article,
 .page .entry-content:not(.contact),
 nav {
-    background: #FFFFFF;
-    border-top: 1px solid rgba(0, 0, 0, 0.01);
-    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.05);
     margin-bottom: 2rem;
     min-width: 17em;
     text-align: center;
@@ -672,25 +674,23 @@ p.MsoNormal {
 }
 .pager li > a,
 .pager li > span {
-    background-position-y: 8px;
-    background-size: 14px;
+    background-position: 12px 21px;
+	background-size: 1rem;
     border: none;
     border-radius: 4px;
     color: rgb(41, 36, 32);
     line-height: 1;
-    padding: 1rem;
+    padding: 2rem;
+}
+.previous span,
+.next span {
+    padding-left: 9px;
 }
 .previous a {
     background: rgb(255, 255, 255) url('../img/theuglyvolvo_arrow-left.png') no-repeat left top;
 }
-.previous span {
-    padding-left: 9px;
-}
 .next a {
     background: rgb(255, 255, 255) url('../img/theuglyvolvo_arrow-right.png') no-repeat right top;
-}
-.next span {
-    padding-right: 9px;
 }
 section#comments {
     background: #F3F3F4;
