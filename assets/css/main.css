@@ -448,7 +448,7 @@ nav.collapse {
     background-color: #FFFFFF;
     /* Override Bootstrap rules before setting new ones. */
     border: none;
-    border-top: 3px solid #EC2512;
+    border-top: 3px solid #000000;
     margin-bottom: 0;
 }
 .navbar-default .navbar-collapse,
