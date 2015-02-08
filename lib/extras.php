@@ -91,7 +91,7 @@ function get_image_url($post_id) {
  * Returns the featured image or the first image in the post.
  */
 function get_main_image($post_id) {
-    if ( has_post_thumbnail($post_id) ) {
+    if ( get_the_post_thumbnail($post_id) != '' ) {
         echo '<a href="'; the_permalink();
         echo '" class="thumbnail-wrapper">';
         the_post_thumbnail( array(275, 250) );
