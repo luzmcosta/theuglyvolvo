@@ -4,7 +4,7 @@
  * The Ugly Volvo WordPress theme's custom CSS.
  *
  * @author Luz M. Costa
- * @updated 01.29.2014
+ * @updated 02.08.2015
  * @version 0.0.2
  *
  * Notes:
@@ -339,7 +339,7 @@ nav.collapse {
 .menu-icon {
     color: #EC2512;
     float: right;
-    margin: 1rem 0;;
+    margin: 1rem 0;
     position: absolute;
     right: 30px;
     transition: color 1s linear;
