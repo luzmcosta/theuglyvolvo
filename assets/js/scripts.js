@@ -66,7 +66,8 @@
     /**
      * Set grid layout.
      */
-    var selectors = ".home main, .page-template-page-popular-php main," +
+    var selectors = ".home main, .search main," +
+    		".page-template-page-popular-php main," +
             " .page-template-archives-php main",
         $container = $( selectors );
 

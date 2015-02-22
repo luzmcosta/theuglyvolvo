@@ -4,7 +4,7 @@
  * The Ugly Volvo WordPress theme's custom CSS.
  *
  * @author Luz M. Costa
- * @updated 02.08.2015
+ * @updated 02.21.2015
  * @version 0.0.2
  *
  * Notes:
@@ -247,6 +247,7 @@ dl {
     margin: 0;
 }
 .home .row,
+.search .row,
 .page-template-page-popular-php .row,
 .page-template-archives-php .row,
 .search-results .row {
@@ -404,7 +405,7 @@ nav.collapse {
 .input-group {
     width: 100%
 }
-.search {
+.social-navbar .search {
     margin: 0 3rem 3rem 2rem;
 }
 .search button {
@@ -568,16 +569,21 @@ header {
     width: 1%;
 }
 .home article,
+.search article,
 .page-template article {
     background: #FFFFFF url('../img/theuglyvolvo_border-top.png') no-repeat center top;
 	border-image: url('../img/theuglyvolvo_border-bottom.png') 0 0 3 stretch;
 }
 .home article,
+.search article,
 .page .entry-content:not(.contact),
 nav {
     margin-bottom: 2rem;
     min-width: 17em;
     text-align: center;
+}
+.search article {
+	max-width: 17em;
 }
 .single .entry-content {
     margin: 2rem 4rem 0 4rem;
@@ -588,15 +594,18 @@ nav {
 .page .entry-content h2 {
     margin: 2rem 1rem;
 }
-.home article header {
+.home article header,
+.search article header {
     margin: 0.25em 1em;
 }
 .home article header,
+.search article header,
 .page .entry-content h2 {
     max-width: 14em;
 }
 
 .home h2.entry-title,
+.search h2.entry-title,
 .page h2.entry-title {
     font-size: 2rem;
     font-weight: 600;
@@ -604,6 +613,7 @@ nav {
 }
 
 .home article img,
+.search article img,
 .page .entry-content img {
     margin: 6px 0;
     max-height: 250px;
@@ -613,7 +623,8 @@ nav {
 .entry-content.most-popular-posts {
     text-align: center;
 }
-.home .entry-summary {
+.home .entry-summary,
+.search .entry-summary {
     margin: 1rem;
     text-align: center;
 }
