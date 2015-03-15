@@ -75,7 +75,7 @@
         $container.masonry({
             columnWidth: "article",
             isFitWidth: true,
-            itemSelector: "article, nav",
+            itemSelector: "article, nav, main .ad",
             gutter: ".gutter",
             transitionDuration: "0.5s"
         });
