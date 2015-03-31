@@ -54,12 +54,12 @@
  */
 
 /* Fonts */
-@import url(http://fonts.googleapis.com/css?family=Coming+Soon|Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+@import url(http://fonts.googleapis.com/css?family=EB+Garamond|Spinnaker);
 
 /* Document Tags */
 html,
 body {
-    font-family: Lato, Century Gothic, sans-serif;
+    font-family: 'EB Garamond', Century Gothic, sans-serif;
 }
 body {
     color: rgb(41, 36, 32);
@@ -96,7 +96,7 @@ h4,
 h5,
 h6 {
     color: rgb(41, 36, 32);
-    font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
+    font-family: 'Spinnaker', 'EB Garamond', Century Gothic, sans-serif;
 }
 h1,
 .h1 {
@@ -148,8 +148,8 @@ figure {
 }
 figcaption:not(.gallery figcaption) {
     color: rgb(147, 147, 152);
-    font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
-    font-weight: 600;
+    font-family: 'Spinnaker', 'EB Garamond', Century Gothic, sans-serif;
+    font-weight: 400;
     margin: 0 3em;
     text-align: center;
 }
@@ -199,7 +199,7 @@ td {
 }
 
 dt {
-    font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
+    font-family: 'Spinnaker', 'EB Garamond', Century Gothic, sans-serif;
     font-weight: 900;
     margin-bottom: 3px;
 }
@@ -277,7 +277,7 @@ nav.collapse {
     float: left;
 }
 .share-count:not(span) {
-    font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
+    font-family: 'Spinnaker', 'EB Garamond', Century Gothic, sans-serif;
     font-size: 2rem;
     font-weight: 600;
     padding: 0 1rem;
@@ -392,7 +392,7 @@ nav.collapse {
     clear: both;
     color: rgb(236, 37, 18);
     display: block;
-    font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
+    font-family: 'Spinnaker', 'EB Garamond', Century Gothic, sans-serif;
     margin: 0 1rem;
 }
 .social .widget_search {
@@ -608,7 +608,7 @@ nav {
 .search h2.entry-title,
 .page h2.entry-title {
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 400;
     vertical-align: middle;
 }
 
@@ -720,14 +720,14 @@ section#comments h3,
 section#respond h3 {
     background: #EC2512;
     color: #FFFFFF;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 1em;
     padding: 1rem;
 }
 .respond {
     color: #FFFFFF;
     display: block;
-    font-family: Lato, Century Gothic, sans-serif;
+    font-family: 'EB Garamond', Century Gothic, sans-serif;
     font-size: small;
 }
 .respond:hover {
@@ -801,7 +801,7 @@ li.comment.bypostauthor > .comment-meta .media-heading {
 }
 .comment-meta .media-heading {
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 400;
     margin: 1em 0;
 }
 .comment-actions a:nth-child(2) {
@@ -840,7 +840,7 @@ footer section {
     max-width: 400px;
 }
 footer section h3 {
-    font-weight: 600;
+    font-weight: 400;
     margin: 0;
 }
 footer .jetpack_subscription_widget {
@@ -875,7 +875,7 @@ footer input[type=submit]:hover {
     border: 3px solid rgb(236, 37, 18);
 }
 footer #subscribe-text {
-    font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
+    font-family: 'Spinnaker', 'EB Garamond', Century Gothic, sans-serif;
     font-size: 2rem;
     vertical-align: middle;
 }
@@ -969,6 +969,7 @@ footer .widget_facebook-like-box {
     margin: 0.5rem 1rem;
 }
 li.feed-item {
+    font-size: 1.75rem;
     list-style: none;
     margin-bottom: 1rem;
     padding-bottom: 1rem;
@@ -987,6 +988,9 @@ li.feed-item:first-child {
 }
 span.feed-date {
     display: none;
+}
+.wprss-time-ago {
+    font-size: small;
 }
 
 .copyright {
@@ -1013,7 +1017,8 @@ input[type="submit"] {
     border: none;
     border-radius: 4px;
     color: white;
-    font-weight: 600 !important;
+    font-family: 'Spinnaker', 'EB Garamond', Century Gothic, sans-serif;
+    font-weight: 400 !important;
     height: 4em;
     text-align: center;
     transition: background-color 0.15s linear;
