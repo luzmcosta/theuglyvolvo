@@ -1088,7 +1088,12 @@ input[type="text"]:focus {
 }
 
 /* Ads */
-main .ad {
+.ad {
+	margin: 2rem auto;
+	text-align: center;
+}
+.home main .ad,
+.search main .ad {
     width: 32rem;
 }
 footer .ad {
