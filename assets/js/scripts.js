@@ -66,7 +66,8 @@
     /**
      * Set grid layout.
      */
-    var selectors = ".home main, .page-template-page-popular-php main," +
+    var selectors = ".home main, .search main," +
+    		".page-template-page-popular-php main," +
             " .page-template-archives-php main",
         $container = $( selectors );
 
@@ -75,8 +76,8 @@
         $container.masonry({
             columnWidth: "article",
             isFitWidth: true,
-            itemSelector: "article, nav",
-            gutter: 0,
+            itemSelector: "article, nav, main .ad",
+            gutter: ".gutter",
             transitionDuration: "0.5s"
         });
     });

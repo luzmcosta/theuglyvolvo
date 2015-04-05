@@ -4,8 +4,8 @@
  * The Ugly Volvo WordPress theme's custom CSS.
  *
  * @author Luz M. Costa
- * @updated 01.11.2014
- * @version 0.0.1
+ * @updated 03.15.2015
+ * @version 0.0.2
  *
  * Notes:
     * Developer Notes
@@ -54,12 +54,12 @@
  */
 
 /* Fonts */
-@import url(http://fonts.googleapis.com/css?family=Coming+Soon|Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+@import url(http://fonts.googleapis.com/css?family=EB+Garamond|Spinnaker);
 
 /* Document Tags */
 html,
 body {
-    font-family: Lato, Century Gothic, sans-serif;
+    font-family: 'EB Garamond', Century Gothic, sans-serif;
 }
 body {
     color: rgb(41, 36, 32);
@@ -79,7 +79,7 @@ img {
     height: auto;
     max-width: 100%;
 }
-p:not(.contact-submit) {
+p:not(form p) {
     max-width: 80ch;
 }
 p,
@@ -87,6 +87,7 @@ p,
     font-size: 2.25rem;
     font-weight: 300;
     margin: 3rem 2rem;
+    max-width: 80ch;
 }
 h1,
 h2,
@@ -95,7 +96,7 @@ h4,
 h5,
 h6 {
     color: rgb(41, 36, 32);
-    font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
+    font-family: 'Spinnaker', 'EB Garamond', Century Gothic, sans-serif;
 }
 h1,
 .h1 {
@@ -123,6 +124,7 @@ h6,
 }
 a {
     color: rgb(236, 37, 18);
+    transition: color 0.5s linear;
 }
 
 a:hover,
@@ -146,8 +148,8 @@ figure {
 }
 figcaption:not(.gallery figcaption) {
     color: rgb(147, 147, 152);
-    font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
-    font-weight: 600;
+    font-family: 'Spinnaker', 'EB Garamond', Century Gothic, sans-serif;
+    font-weight: 400;
     margin: 0 3em;
     text-align: center;
 }
@@ -197,12 +199,11 @@ td {
 }
 
 dt {
-    font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
+    font-family: 'Spinnaker', 'EB Garamond', Century Gothic, sans-serif;
     font-weight: 900;
     margin-bottom: 3px;
 }
 dd {
-    border-image: url('../img/theuglyvolvo_border-bottom.png') 0 6 3 stretch;
     font-weight: 300;
     margin-bottom: 1em;
     padding-bottom: 0.5em;
@@ -245,6 +246,13 @@ dl {
 .row {
     margin: 0;
 }
+.home .row,
+.search .row,
+.page-template-page-popular-php .row,
+.page-template-archives-php .row,
+.search-results .row {
+    background: #F3F3F4;
+}
 .social-navbar {
     background: rgba(255, 255, 255, 0.95);
     border-bottom: 3px solid #000;
@@ -269,7 +277,7 @@ nav.collapse {
     float: left;
 }
 .share-count:not(span) {
-    font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
+    font-family: 'Spinnaker', 'EB Garamond', Century Gothic, sans-serif;
     font-size: 2rem;
     font-weight: 600;
     padding: 0 1rem;
@@ -330,11 +338,16 @@ nav.collapse {
     box-shadow: -3px 3px rgba(0, 0, 0, 0.15);
 }
 .menu-icon {
+    color: #EC2512;
     float: right;
-    margin: 1rem 0;;
+    margin: 1rem 0;
     position: absolute;
     right: 30px;
+    transition: color 1s linear;
     z-index: 100;
+}
+.menu-icon:hover {
+    color: #292420;
 }
 .social-navbar img {
     max-height: 32px;
@@ -379,7 +392,7 @@ nav.collapse {
     clear: both;
     color: rgb(236, 37, 18);
     display: block;
-    font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
+    font-family: 'Spinnaker', 'EB Garamond', Century Gothic, sans-serif;
     margin: 0 1rem;
 }
 .social .widget_search {
@@ -392,7 +405,7 @@ nav.collapse {
 .input-group {
     width: 100%
 }
-.search {
+.social-navbar .search {
     margin: 0 3rem 3rem 2rem;
 }
 .search button {
@@ -400,6 +413,10 @@ nav.collapse {
 }
 .search label {
     display: none;
+}
+.search-field:focus {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 3px -1px rgba(0, 0, 0, 0.15);
 }
 .like,
 .retweet {
@@ -430,7 +447,9 @@ nav.collapse {
 
 .navbar-default {
     background-color: #FFFFFF;
+    /* Override Bootstrap rules before setting new ones. */
     border: none;
+    border-top: 3px solid #000000;
     margin-bottom: 0;
 }
 .navbar-default .navbar-collapse,
@@ -445,6 +464,7 @@ nav.collapse {
 
 .navbar-nav {
     float: none;
+	font-family: 'Spinnaker', 'EB Garamond', Century Gothic, sans-serif;
     text-align: center;
 }
 
@@ -454,7 +474,7 @@ nav.collapse {
     font-size: 1em;
     font-weight: 300;
     margin: 0.75em 1em;
-    max-width: 7em;
+    max-width: 11rem;
     min-width: 4em;
 }
 
@@ -505,6 +525,10 @@ h2 a:hover {
     background: url('../img/theuglyvolvo_contact.png') no-repeat center top;
     background-size: 35px;
 }
+.menu-support {
+    background: url('../img/icons_mug_64.png') no-repeat center top;
+    background-size: 35px;
+}
 /* Menu Descriptions */
 .menu-contact span.sub {
 /*    font-size: 0.9em; */
@@ -542,15 +566,25 @@ header {
     text-align: center;
 }
 
+.gutter {
+    width: 1%;
+}
 .home article,
-.page .entry-content:not(.contact) {
-    background: url('../img/theuglyvolvo_border-top.png') no-repeat center top;
-    border-image: url('../img/theuglyvolvo_border-bottom.png') 0 0 3 stretch;
-    display: inline-block;
-    margin: 0.25em 0.5em 1em 0.5em;
-    padding-bottom: 1em;
+.search article,
+.page-template article {
+    background: #FFFFFF url('../img/theuglyvolvo_border-top.png') no-repeat center top;
+	border-image: url('../img/theuglyvolvo_border-bottom.png') 0 0 3 stretch;
+}
+.home article,
+.search article,
+.page .entry-content:not(.contact),
+nav {
+    margin-bottom: 2rem;
     min-width: 17em;
     text-align: center;
+}
+.search article {
+	max-width: 17em;
 }
 .single .entry-content {
     margin: 2rem 4rem 0 4rem;
@@ -561,22 +595,26 @@ header {
 .page .entry-content h2 {
     margin: 2rem 1rem;
 }
-.home article header {
+.home article header,
+.search article header {
     margin: 0.25em 1em;
 }
 .home article header,
+.search article header,
 .page .entry-content h2 {
     max-width: 14em;
 }
 
 .home h2.entry-title,
+.search h2.entry-title,
 .page h2.entry-title {
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 400;
     vertical-align: middle;
 }
 
 .home article img,
+.search article img,
 .page .entry-content img {
     margin: 6px 0;
     max-height: 250px;
@@ -586,8 +624,9 @@ header {
 .entry-content.most-popular-posts {
     text-align: center;
 }
-.home .entry-summary {
-    margin: 1rem 0 0 4px;
+.home .entry-summary,
+.search .entry-summary {
+    margin: 1rem;
     text-align: center;
 }
 .gallery ul {
@@ -629,9 +668,11 @@ p.MsoNormal {
 
 
 /* Links and Menus */
-nav.post-nav {
-    margin: 0.25em 0.5em 1em 0.5em;
-    min-width: 17em;
+.pager {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 2rem 0;
 }
 .pager .previous > a,
 .pager .previous > span,
@@ -639,50 +680,60 @@ nav.post-nav {
 .pager .next > span {
     float: none;
 }
+.pager li {
+    display: inline-flex;
+}
 .pager li > a:hover,
 .pager li > a:focus {
     background-color: transparent;
+    color: rgb(236, 37, 18);
 }
 .pager li > a,
 .pager li > span {
+    background-position: 12px 21px;
+	background-size: 1rem;
     border: none;
+    border-radius: 4px;
     color: rgb(41, 36, 32);
     line-height: 1;
+    padding: 2rem;
+}
+.previous span,
+.next span {
+    padding-left: 9px;
 }
 .previous a {
     background: rgb(255, 255, 255) url('../img/theuglyvolvo_arrow-left.png') no-repeat left top;
-    background-size: 18px;
-}
-.previous a:focus,
-.previous a:hover {
-    margin-right: 3px;
-}
-.previous span {
-    padding-left: 15px;
 }
 .next a {
     background: rgb(255, 255, 255) url('../img/theuglyvolvo_arrow-right.png') no-repeat right top;
-    background-size: 18px;
-}
-.next a:focus,
-.next a:hover {
-    margin-left: 3px;
-}
-.next span {
-    padding-right: 15px;
 }
 section#comments {
+    background: #F3F3F4;
     clear: both;
     margin: 6rem 0;
+    padding-bottom: 1rem;
+}
+section#comments nav {
+    margin: 1rem;
 }
 section#comments h3,
 section#respond h3 {
-    border-bottom: 1px solid red;
-    font-family: Lato, Century Gothic, sans-serif;
-    font-weight: 600;
+    background: #EC2512;
+    color: #FFFFFF;
+    font-weight: 400;
     font-size: 1em;
-    margin-bottom: 3rem;
-    padding-bottom: 1rem;
+    padding: 1rem;
+}
+.respond {
+    color: #FFFFFF;
+    display: block;
+    font-family: 'EB Garamond', Century Gothic, sans-serif;
+    font-size: small;
+}
+.respond:hover {
+    color: #FFFFFF;
+    font-style: italic;
 }
 .comment .form-control {
     font-size: 100%;
@@ -692,9 +743,9 @@ section#respond h3 {
     margin: 1rem;
 }
 .media-list > li {
-    border-left: 3px solid red;
-    margin-bottom: 3rem;
-    padding-left: 2rem;
+    background: #FFF;
+    margin: 1rem;
+    padding: 3rem;
 }
 li.comment.depth-3 > .comment-meta,
 li.comment.depth-4 > .comment-meta,
@@ -710,8 +761,8 @@ li.comment p {
     margin: 0 auto 2rem 2rem;
 }
 li.comment li {
-    border-left: 3px solid rgb(236, 37, 18);
-    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
     margin: 2rem;
     padding: 1rem;
 }
@@ -751,7 +802,7 @@ li.comment.bypostauthor > .comment-meta .media-heading {
 }
 .comment-meta .media-heading {
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 400;
     margin: 1em 0;
 }
 .comment-actions a:nth-child(2) {
@@ -760,7 +811,15 @@ li.comment.bypostauthor > .comment-meta .media-heading {
     padding-left: 0.5em;
 }
 section#respond {
+    background: #F3F3F4;
     margin: 3em 0;
+}
+section#respond .form-group,
+section#respond p {
+    margin: 3rem;
+}
+form#commentform {
+    padding-bottom: 1rem;
 }
 div#jp-relatedposts {
     clear: both;
@@ -782,13 +841,14 @@ footer section {
     max-width: 400px;
 }
 footer section h3 {
-    font-weight: 600;
+    font-weight: 400;
+    margin: 0;
 }
 footer .jetpack_subscription_widget {
     background: rgb(0, 0, 0);
     color: white;
     float: none;
-    margin: 2em 0;
+    margin: 0 0 2em 0;
     padding: 2em;
     max-width: 100%;
     text-align: center;
@@ -816,7 +876,7 @@ footer input[type=submit]:hover {
     border: 3px solid rgb(236, 37, 18);
 }
 footer #subscribe-text {
-    font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
+    font-family: 'Spinnaker', 'EB Garamond', Century Gothic, sans-serif;
     font-size: 2rem;
     vertical-align: middle;
 }
@@ -841,8 +901,7 @@ footer .jetpack_subscription_widget i {
 }
 footer .widget_twitter_timeline h3 {
     background: url(../img/theuglyvolvo_twitter.png) 0 0 no-repeat;
-    background-size: 57px;
-    border-image: url('../img/theuglyvolvo_border-bottom.png') 0 0 3 stretch;
+    background-size: 50px;
     font-size: 2rem;
     line-height: 3;
     margin-top: 0;
@@ -890,6 +949,7 @@ footer .widget_facebook-like-box {
 .theuglyvolvo_on_facebook img {
     border-radius: 4px;
     margin-right: 12px;
+    width: 42px;
 }
 .theuglyvolvo_on_facebook h3 {
     font-size: 2rem;
@@ -910,6 +970,7 @@ footer .widget_facebook-like-box {
     margin: 0.5rem 1rem;
 }
 li.feed-item {
+    font-size: 1.75rem;
     list-style: none;
     margin-bottom: 1rem;
     padding-bottom: 1rem;
@@ -918,9 +979,8 @@ li.feed-item:first-child {
     margin-top: 2rem;
 }
 .rss-aggregator {
-    border-image: url('../img/theuglyvolvo_border-bottom.png') 3 0 0 stretch;
     clear: both;
-    margin: 2rem 0;
+    margin: 1.35rem 0;
     padding: 0;
 }
 .rss-aggregator + .nav-links {
@@ -929,6 +989,9 @@ li.feed-item:first-child {
 }
 span.feed-date {
     display: none;
+}
+.wprss-time-ago {
+    font-size: small;
 }
 
 .copyright {
@@ -955,9 +1018,11 @@ input[type="submit"] {
     border: none;
     border-radius: 4px;
     color: white;
-    font-weight: 600 !important;
+    font-family: 'Spinnaker', 'EB Garamond', Century Gothic, sans-serif;
+    font-weight: 400 !important;
     height: 4em;
     text-align: center;
+    transition: background-color 0.15s linear;
     padding: 0 1em;
     width: 100%;
 }
@@ -979,7 +1044,8 @@ input[type="submit"]:active {
 }
 label,
 input {
-    font-family: "Coming Soon", Lato, Century Gothic, sans-serif;
+    font-size: smaller;
+    font-weight: 300;
     outline: none;
 }
 textarea,
@@ -987,7 +1053,6 @@ input[type="email"],
 input[type="text"] {
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 0.25rem;
-    margin: 1rem 0;
     outline: none;
     padding: 6px 12px;
     width: 100% !important;
@@ -1027,6 +1092,20 @@ input[type="text"]:focus {
 .contact-form span {
     font-size: 0.8em;
 }
+
+/* Ads */
+.ad {
+	margin: 2rem auto;
+	text-align: center;
+}
+.home main .ad,
+.search main .ad {
+    width: 32rem;
+}
+footer .ad {
+    width: 100%;
+}
+
 
 /* Removes WordPress smiley face. */
 #wpstats {
@@ -1073,7 +1152,7 @@ input[type="text"]:focus {
     }
     .row {
         margin: 0;
-        padding: 0 4rem;
+        padding: 4rem;
     }
     p,
     .form-group {
