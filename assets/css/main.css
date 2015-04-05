@@ -464,6 +464,7 @@ nav.collapse {
 
 .navbar-nav {
     float: none;
+	font-family: 'Spinnaker', 'EB Garamond', Century Gothic, sans-serif;
     text-align: center;
 }
 
@@ -473,7 +474,7 @@ nav.collapse {
     font-size: 1em;
     font-weight: 300;
     margin: 0.75em 1em;
-    max-width: 7em;
+    max-width: 11rem;
     min-width: 4em;
 }
 
